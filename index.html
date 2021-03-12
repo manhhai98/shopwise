@@ -1,0 +1,2514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <!-- Flat Icon -->
+    <link rel="stylesheet" href="assets/font/flaticon.css">
+    <!-- Linear Icons -->
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <!-- Themify Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/themify-icons/0.1.2/css/themify-icons.css">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- Fancy Box CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Start Loader -->
+        <div class="loader">
+            <div class="loader__item">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <!-- End Loader -->
+
+        <!-- Start Modal -->
+        <div class="modal fade" id="modal"  tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 500px;">
+              <div class="modal-content">
+                <div class="modal-body">
+                    <a type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </a>
+                    
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="modal__main">
+                                <div class="modal__main-text">
+                                    <div class="text__heading">
+                                        <h4>Subscribe and Get 25% Discount!</h4>
+                                    </div>
+
+                                    <p>Subscribe to the newsletter to receive updates about new products.</p>
+                                </div>
+
+                                <form action="#" class="modal__main-form">
+                                    <input class="form__control" type="email" name="email" 
+                                    placeholder="enter your email">
+
+                                    <a href="#" class="form__btn" type="submit">subcribe</a>
+                                </form>
+
+                                <label class="modal__main-check">
+                                    <span>Don't show this popup again!</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <!-- End Modal -->
+
+        <!-- Start Modal Compare -->
+        <div class="modal fade compareModal" id="compareModal" tabindex="-1" role="dialog" aria-labelledby="compareModal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 1175px;">
+              <div class="modal-content">
+                
+                  <a type="button" class="close text-right p-1" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </a>
+
+                <div class="modal-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered text-center">
+                            <tbody>
+                                <tr class="product__item">
+                                    <td class="product__item-title">product image</td>
+                                    <td class="product__item-image">
+                                        <img src="assets/images/product_img1.jpg" alt="product_img1">
+                                    </td>
+                                    <td class="product__item-image">
+                                        <img src="assets/images/product_img2.jpg" alt="product_img2">
+                                    </td>
+                                    <td class="product__item-image">
+                                        <img src="assets/images/product_img3.jpg" alt="product_img3">
+                                    </td>
+                                </tr>
+                                <tr class="product__item">
+                                    <td class="product__item-title">product name</td>
+                                    <td class="product__item-name">
+                                        <a class="name__link">blue dress for woman</a>
+                                    </td>
+                                    <td class="product__item-name">
+                                        <a class="name__link">lether gray tuxedo</a>
+                                    </td>
+                                    <td class="product__item-name">
+                                        <a class="name__link">women full sliv dress</a>
+                                    </td>
+                                </tr>
+                                <tr class="product__item">
+                                    <td class="product__item-title">price</td>
+                                    <td class="product__item-price">
+                                        <span>$45.00</span>
+                                    </td>
+                                    <td class="product__item-price">
+                                        <span>$55.00</span>
+                                    </td><td class="product__item-price">
+                                        <span>$68.00</span>
+                                    </td>
+                                </tr>
+                                <tr class="product__item">
+                                    <td class="product__item-title">rating</td>
+                                    <td class="product__item-rate">
+                                        <div class="rate__content">
+                                            <div class="rate__content-item w-80"></div>
+                                        </div>
+                                        <span>(21)</span>
+                                    </td>
+                                    <td class="product__item-rate">
+                                        <div class="rate__content">
+                                            <div class="rate__content-item w-68"></div>
+                                        </div>
+                                        <span>(15)</span>
+                                    </td>
+                                    <td class="product__item-rate">
+                                        <div class="rate__content">
+                                            <div class="rate__content-item w-87"></div>
+                                        </div>
+                                        <span>(25)</span>
+                                    </td>
+                                </tr>
+                                <tr class="product__item">
+                                    <td class="product__item-title">add to cart</td>
+                                    <td class="product__item-btn">
+                                        <a class="btn__add">
+                                            <i class="ti-shopping-cart-full"></i>
+                                            add to cart
+                                        </a>
+                                    </td>
+                                    <td class="product__item-btn">
+                                        <a class="btn__add">
+                                            <i class="ti-shopping-cart-full"></i>
+                                            add to cart
+                                        </a>
+                                    </td>
+                                    <td class="product__item-btn">
+                                        <a class="btn__add">
+                                            <i class="ti-shopping-cart-full"></i>
+                                            add to cart
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="product__item">
+                                    <td class="product__item-title">description</td>
+                                    <td>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and 
+                                            typesetting industry. Lorem Ipsum has been the industry's 
+                                            standard dummy text ever since the 1500s, when an unknown 
+                                            printer took a galley of type and </p>
+                                    </td>
+                                    <td>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and 
+                                            typesetting industry. Lorem Ipsum has been the industry's 
+                                            standard dummy text ever since the 1500s, when an unknown 
+                                            printer took a galley of type and </p>
+                                    </td>
+                                    <td>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and 
+                                            typesetting industry. Lorem Ipsum has been the industry's 
+                                            standard dummy text ever since the 1500s, when an unknown 
+                                            printer took a galley of type and </p>
+                                    </td>
+                                </tr>
+                                <tr class="product__item">
+                                    <td class="product__item-title">color</td>
+                                    <td class="product__item-color">
+                                        <span style="background-color: rgb(135, 85, 75);"></span>
+                                        <span style="background-color: rgb(51, 51, 51);"></span>
+                                        <span style="background-color: rgb(218, 50, 63);"></span>
+                                    </td>
+                                    <td></td>
+                                    <td class="product__item-color">
+                                        <span style="background-color: rgb(51, 51, 51);"></span>
+                                        <span style="background-color: rgb(124, 80, 47);"></span>
+                                        <span style="background-color: rgb(47, 54, 108);"></span>
+                                        <span style="background-color: rgb(135, 74, 61);"></span>
+                                    </td>
+                                </tr>
+                                <tr class="product__item">
+                                    <td class="product__item-title">sizes available</td>
+                                    <td class="product__item-size">
+                                        <span>S,M,L,XL</span>
+                                    </td>
+                                    <td class="product__item-size">
+                                        <span>S,M,L,XL</span>
+                                    </td>
+                                    <td class="product__item-size">
+                                        <span>S,M,L,XL</span>
+                                    </td>
+                                </tr>
+                                <tr class="product__item">
+                                    <td class="product__item-title">item avaiability</td>
+                                    <td class="text-success">
+                                        <span>In Stock</span>
+                                    </td>
+                                    <td class="text-danger">
+                                        <span>Out Of Stock</span>
+                                    </td>
+                                    <td class="text-success">
+                                        <span>In Stock</span>
+                                    </td>
+                                </tr>
+                                <tr class="product__item">
+                                    <td class="product__item-title">weight</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr class="product__item">
+                                    <td class="product__item-title">dimensions</td>
+                                    <td class="product__item-dimension">N/A</td>
+                                    <td class="product__item-dimension">N/A</td>
+                                    <td class="product__item-dimension">N/A</td>
+                                </tr>
+                                <tr class="product__item">
+                                    <td></td>
+                                    <td class="product__item-remove">
+                                        <a class="text-danger">
+                                            <span>Remove</span>
+                                            <i class="fa fa-times"></i>
+                                        </a>
+                                    </td>
+                                    <td class="product__item-remove">
+                                        <a class="text-danger">
+                                            <span>Remove</span>
+                                            <i class="fa fa-times"></i>
+                                        </a>
+                                    </td>
+                                    <td class="product__item-remove">
+                                        <a class="text-danger">
+                                            <span>Remove</span>
+                                            <i class="fa fa-times"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <!-- End Modal Compare -->
+
+         <!-- Start Zoom Modal -->
+        <div class="modal fade zoomModal" id="zoomModal" tabindex="-1" role="dialog" aria-labelledby="zoomModal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 1175px;">
+              <div class="modal-content">
+                
+                <a type="button" class="close close-zoom text-right p-1" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </a>
+
+                <div class="modal-body" style="padding: 30px;">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <div class="zoom-area mb-rsp-3 product__image">
+                                <div class="product__image-box">
+                                    <img id="zoompro" src="assets/images/product_img1.jpg" 
+                                    data-zoom-image="assets/images/product_img1.jpg"
+                                    alt="zoom" />
+                                </div>
+                                <div id="gallery" class="mt-30 owl-carousel owl-theme product__image-gallery">
+                                    
+                                    <a href="#" class="gallery__link active" data-image="assets/images/product_img1.jpg"
+                                        data-zoom-image="assets/images/product_img1.jpg">
+                                        <img src="assets/images/product_img1.jpg" alt="zoom" />
+                                    </a>
+                                    
+                                    
+                                    <a href="#" class="gallery__link" data-image="assets/images/product_img1-2.jpg"
+                                        data-zoom-image="assets/images/product_img1-2.jpg">
+                                        <img src="assets/images/product_img1-2.jpg" alt="zoom" />
+                                    </a>
+                                    
+                                    
+                                    <a href="#" class="gallery__link" data-image="assets/images/product_img1-3.jpg"
+                                        data-zoom-image="assets/images/product_img1-3.jpg">
+                                        <img src="assets/images/product_img1-3.jpg" alt="zoom" />
+                                    </a>
+                                    
+                                    
+                                    <a href="#" class="gallery__link" data-image="assets/images/product_img1-4.jpg"
+                                        data-zoom-image="assets/images/product_img1-4.jpg">
+                                        <img src="assets/images/product_img1-4.jpg" alt="zoom" />
+                                    </a>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6">
+                            <div class="product__detail">
+                                <div class="product__detail-info">
+                                    <h4 class="info__title">
+                                        <a href="product-detail.html">blue dress for woman</a>                             
+                                    </h4>
+                                    <div class="info__price">
+                                        <span class="info__price-item">$45.00</span>
+                                        <del>$55.25</del>
+                                        <span class="info__price-sale">35% Off</span>
+                                    </div>
+                                    <div class="info__rating">
+                                        <div class="info__rating-content">
+                                            <div class="content__item w-80"></div>
+                                        </div>
+
+                                        <span>(21)</span>
+                                    </div>
+
+                                    <div class="clearfix"></div>
+
+                                    <div class="info__description">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                            Phasellus blandit massa enim. Nullam id varius nunc id 
+                                            varius nunc.</p>
+                                    </div>
+                                    <div class="info__list">
+                                        <ul>
+                                            <li>
+                                                <i class="ti-shield"></i>
+                                                1 Year AL Jazeera Brand Warranty
+                                            </li>
+                                            <li>
+                                                <i class="lnr lnr-sync"></i>
+                                                30 Day Return Policy
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-dollar-sign"></i>
+                                                Cash on Delivery available
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="info__color">
+                                        <span class="info__color-text">Color</span>
+                                        <div class="info__color-switch">
+                                            <span class="switch__item active" style="background-color: rgb(135, 85, 75);"></span>
+                                            <span class="switch__item" style="background-color: rgb(51, 51, 51);"></span>
+                                            <span class="switch__item" style="background-color: rgb(218, 50, 63);"></span>
+                                        </div>
+                                    </div>
+                                    <div class="info__size">
+                                        <span class="info__size-title">Size</span>
+                                        <div class="info__size-switch">
+                                            <span class="switch__item1">xs</span>
+                                            <span class="switch__item1">s</span>
+                                            <span class="switch__item1">m</span>
+                                            <span class="switch__item1">l</span>
+                                            <span class="switch__item1">xl</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <hr>
+
+                                <div class="product__detail-cart">
+                                    <div class="quantity">
+                                        <input type="button" value="-" class="quantity__minus">
+                                        <input type="text" name="quantity" value="1" title="Qty" class="quantity__qtn" size="4">
+                                        <input type="button" value="+" class="quantity__plus">
+                                    </div>
+            
+                                    <div class="cart__add">
+                                        <a href="#" class="cart__add-btn">
+                                            <i class="ti-shopping-cart-full"></i>
+                                            add to cart
+                                        </a>
+                                        <a href="#" class="cart__add-icon"><i class="ti-control-shuffle"></i></a>
+                                        <a href="#" class="cart__add-icon"><i class="ti-heart"></i></a>
+                                    </div>
+                                </div>
+
+                                <hr>
+
+                                <ul class="product__detail-meta">
+                                    <li>
+                                        SKU:
+                                        <a href="#">BE45VGRT</a>
+                                    </li>
+                                    <li>
+                                        Category:
+                                        <a href="#">Clothing</a>
+                                    </li>
+                                    <li>
+                                        Tags:
+                                        <a href="#">Cloth</a>
+                                        ,
+                                        <a href="#">prited</a>
+                                    </li>
+                                </ul>
+
+                                <div class="product__detail-social">
+                                    <span class="social__text">Share:</span>
+                                    <ul class="social__icon">
+                                        <li>
+                                            <a><i class="fab fa-facebook-f"></i></a>
+                                        </li>
+                                        <li>
+                                            <a><i class="fab fa-twitter"></i></a>
+                                        </li>
+                                        <li>
+                                            <a><i class="fab fa-google-plus-g"></i></a>
+                                        </li>
+                                        <li>
+                                            <a><i class="fab fa-youtube"></i></a>
+                                        </li>
+                                        <li>
+                                            <a><i class="fab fa-instagram"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <!-- End Zoom Modal -->
+
+        <!-- Start Header -->
+        <div class="header">
+            <div class="header__wrap">
+                <div class="header__wrap-top">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <div class="top__items">
+                                    <div class="top__items-item">
+                                        <span class="item__text">
+                                            <img src="assets/images/eng.png" alt="english">
+                                            English
+                                        </span>
+                                        <span class="item__arrow"><i class="ti-angle-down"></i></span>
+                                        <ul class="item__dropdown">
+                                            <li class="item__dropdown-item">
+                                                <a class="item__link">
+                                                    <img src="assets/images/eng.png" alt="english">
+                                                    English
+                                                </a>
+                                            </li>
+                                            <li class="item__dropdown-item">
+                                                <a class="item__link">
+                                                    <img src="assets/images/fn.png" alt="france">
+                                                    France
+                                                </a>
+                                            </li>
+                                            <li class="item__dropdown-item">
+                                                <a class="item__link">
+                                                    <img src="assets/images/us.png" alt="us">
+                                                    United States
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="top__items-item">
+                                        <span class="item__text">USD</span>
+                                        <span class="item__arrow"><i class="ti-angle-down"></i></span>
+                                        <ul class="item__dropdown">
+                                            <li class="item__dropdown-item">
+                                                <a class="item__link">USD</a>
+                                            </li>
+                                            <li class="item__dropdown-item">
+                                                <a class="item__link">EUR</a>
+                                            </li>
+                                            <li class="item__dropdown-item">
+                                                <a class="item__link">GBR</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="top__items-item">
+                                        <span class="item__phone"><i class="ti-mobile"></i></span>
+                                        <span class="item__text">123-456-7890</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <ul class="top__list">
+                                    <li class="top__list-item">
+                                        <a class="item__link">
+                                            <i class="ti-control-shuffle"></i>
+                                            compare
+                                        </a>
+                                    </li>
+                                    <li class="top__list-item">
+                                        <a class="item__link">
+                                            <i class="ti-heart"></i>
+                                            wishlist
+                                        </a>
+                                    </li>
+                                    <li class="top__list-item p-0">
+                                        <a class="item__link">
+                                            <i class="ti-user"></i>
+                                            login
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header__wrap-bottom">
+                    <div class="container">
+                        <div class="bottom__navbar">
+                            <a href="index.html" class="bottom__navbar-logo">
+                                <img src="assets/images/logo_dark.png" alt="logo">
+                            </a>
+                            
+                            <ul class="bottom__navbar-list">
+                                <li class="list__item position-relative">
+                                    <a class="list__item-link active">
+                                        home
+                                        <i class="ti-angle-down"></i>
+                                    </a>
+
+                                    <ul class="list__item-dropdown">
+                                        <li class="dropdown__item">
+                                            <a href="index.html" class="dropdown__item-link">fashion 1</a>
+                                        </li>
+                                        <li class="dropdown__item">
+                                            <a href="index.html" class="dropdown__item-link">fashion 2</a>
+                                        </li>
+                                        <li class="dropdown__item">
+                                            <a href="index.html" class="dropdown__item-link active">furniture 1</a>
+                                        </li> 
+                                        <li class="dropdown__item">
+                                            <a href="index.html" class="dropdown__item-link"> furniture 2</a>
+                                        </li>
+                                        <li class="dropdown__item">
+                                            <a href="index.html" class="dropdown__item-link">electronics 1</a>
+                                        </li>
+                                        <li class="dropdown__item">
+                                            <a href="index.html" class="dropdown__item-link">electronics 2</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="list__item position-relative">
+                                    <a class="list__item-link">
+                                        pages
+                                        <i class="ti-angle-down"></i>
+                                    </a>
+
+                                    <ul class="list__item-dropdown">
+                                        <li class="dropdown__item">
+                                            <a href="about-us.html" class="dropdown__item-link">about us</a>
+                                        </li>
+                                        <li class="dropdown__item">
+                                            <a href="contact-us.html" class="dropdown__item-link">contact us</a>
+                                        </li>
+                                        <li class="dropdown__item">
+                                            <a href="faq.html" class="dropdown__item-link">faq</a>
+                                        </li>
+                                        <li class="dropdown__item">
+                                            <a href="error.html" class="dropdown__item-link">404 error page</a>
+                                        </li>
+                                        <li class="dropdown__item">
+                                            <a href="login.html" class="dropdown__item-link">login</a>
+                                        </li>
+                                        <li class="dropdown__item">
+                                            <a href="register.html" class="dropdown__item-link">register</a>
+                                        </li>
+                                        <li class="dropdown__item">
+                                            <a href="term-condition.html" class="dropdown__item-link">terms and conditions</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="list__item">
+                                    <a class="list__item-link">
+                                        products
+                                        <i class="ti-angle-down"></i>
+                                    </a>
+
+                                    <div class="list__item-dropdown mt-0">
+                                        <div class="dropdown__items">
+                                            <ul class="dropdown__items-list">
+                                                <li class="list__header">
+                                                    woman's
+                                                </li>
+                                                <li class="list__item">
+                                                    <a href="product-detail.html" class="list__item-link">vestibulum sed</a>
+                                                </li>
+                                                <li class="list__item">
+                                                    <a href="product-detail.html" class="list__item-link">donec porttitor</a>
+                                                </li>
+                                                <li class="list__item">
+                                                    <a href="product-detail.html" class="list__item-link">donec vitae facilisis</a>
+                                                </li>
+                                                <li class="list__item">
+                                                    <a href="product-detail.html" class="list__item-link">curabitur tempus</a>
+                                                </li>
+                                                <li class="list__item">
+                                                    <a href="product-detail.html" class="list__item-link">vivamus in tortor</a>
+                                                </li>
+                                            </ul>
+    
+                                            <ul class="dropdown__items-list">
+                                                <li class="list__header">
+                                                    men's
+                                                </li>
+                                                <li class="list__item">
+                                                    <a href="product-detail.html" class="list__item-link">donec vitae ante ante</a>
+                                                </li>
+                                                <li class="list__item">
+                                                    <a href="product-detail.html" class="list__item-link">etiam ac rutrum</a>
+                                                </li>
+                                                <li class="list__item">
+                                                    <a href="product-detail.html" class="list__item-link">quisque condimentum</a>
+                                                </li>
+                                                <li class="list__item">
+                                                    <a href="product-detail.html" class="list__item-link">curabitur laoreet</a>
+                                                </li>
+                                                <li class="list__item">
+                                                    <a href="product-detail.html" class="list__item-link">vivamus in tortor</a>
+                                                </li>
+                                            </ul>
+    
+                                            <ul class="dropdown__items-list">
+                                                <li class="list__header">
+                                                    kid's
+                                                </li>
+                                                <li class="list__item">
+                                                    <a href="product-detail.html" class="list__item-link">donec vitae facilisis</a>
+                                                </li>
+                                                <li class="list__item">
+                                                    <a href="product-detail.html" class="list__item-link">quisque condimentum</a>
+                                                </li>
+                                                <li class="list__item">
+                                                    <a href="product-detail.html" class="list__item-link">etiam ac rutrum</a>
+                                                </li>
+                                                <li class="list__item">
+                                                    <a href="product-detail.html" class="list__item-link">donec vitae ante ante</a>
+                                                </li>
+                                                <li class="list__item">
+                                                    <a href="product-detail.html" class="list__item-link">donec porttitor</a>
+                                                </li>
+                                            </ul>
+    
+                                            <ul class="dropdown__items-list border-0">
+                                                <li class="list__header">
+                                                    accessories
+                                                </li>
+                                                <li class="list__item">
+                                                    <a href="product-detail.html" class="list__item-link">donec vitae facilisis</a>
+                                                </li>
+                                                <li class="list__item">
+                                                    <a href="product-detail.html" class="list__item-link">quisque condimentum</a>
+                                                </li>
+                                                <li class="list__item">
+                                                    <a href="product-detail.html" class="list__item-link">etiam ac rutrum</a>
+                                                </li>
+                                                <li class="list__item">
+                                                    <a href="product-detail.html" class="list__item-link">donec vitae ante ante</a>
+                                                </li>
+                                                <li class="list__item">
+                                                    <a href="product-detail.html" class="list__item-link">donec porttitor</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+    
+                                        <div class="dropdown__sale d-flex">
+                                            <div class="col-sm-4">
+                                                <div class="dropdown__sale-banner position-relative">
+                                                    <div class="banner__image">
+                                                        <img src="assets/images/menu_banner11.jpg" alt="image">
+                                                    </div>
+    
+                                                    <div class="banner__info">
+                                                        <h6>10% Off</h6>
+                                                        <h4>Wooden Chair</h4>
+                                                        <a>Shop Now</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="dropdown__sale-banner">
+                                                    <div class="banner__image">
+                                                        <img src="assets/images/menu_banner22.jpg" alt="image">
+                                                    </div>
+    
+                                                    <div class="banner__info">
+                                                        <h6>15% Off</h6>
+                                                        <h4>Wooden Chair</h4>
+                                                        <a>Shop Now</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="dropdown__sale-banner">
+                                                    <div class="banner__image">
+                                                        <img src="assets/images/menu_banner33.jpg" alt="image">
+                                                    </div>
+    
+                                                    <div class="banner__info">
+                                                        <h6>23% Off</h6>
+                                                        <h4>Wooden Chair</h4>
+                                                        <a>Shop Now</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="list__item position-relative">
+                                    <a class="list__item-link">
+                                        blog
+                                        <i class="ti-angle-down"></i>
+                                    </a>
+
+                                    <ul class="list__item-dropdown">
+                                        <li class="dropdown__item position-relative">
+                                            <a class="dropdown__item-link">
+                                                grids
+                                                <i class="ti-angle-right"></i>
+                                            </a>
+
+                                            <ul class="dropdown__item-list">
+                                                <li class="list__item">
+                                                    <a href="blog.html" class="list__item-link">3 columns</a>
+                                                </li>
+                                                <li class="list__item">
+                                                    <a href="blog.html" class="list__item-link">4 columns</a>
+                                                </li>
+                                                <li class="list__item">
+                                                    <a href="blog.html" class="list__item-link">left sidebar</a>
+                                                </li>
+                                                <li class="list__item">
+                                                    <a href="blog.html" class="list__item-link">right sidebar</a>
+                                                </li>
+                                                <li class="list__item">
+                                                    <a href="blog.html" class="list__item-link">standard left sidebar</a>
+                                                </li>
+                                                <li class="list__item">
+                                                    <a href="blog.html" class="list__item-link">standard right sidebar</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="dropdown__item position-relative">
+                                            <a class="dropdown__item-link">
+                                                masonry
+                                                <i class="ti-angle-right"></i>
+                                            </a>
+
+                                            <ul class="dropdown__item-list">
+                                                <li class="list__item">
+                                                    <a class="list__item-link">3 columns</a>
+                                                </li>
+                                                <li class="list__item">
+                                                    <a class="list__item-link">4 columns</a>
+                                                </li>
+                                                <li class="list__item">
+                                                    <a class="list__item-link">left sidebar</a>
+                                                </li>
+                                                <li class="list__item">
+                                                    <a class="list__item-link">right sidebar</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="dropdown__item position-relative">
+                                            <a class="dropdown__item-link">
+                                                single-post
+                                                <i class="ti-angle-right"></i>
+                                            </a>
+
+                                            <ul class="dropdown__item-list">
+                                                <li class="list__item">
+                                                    <a class="list__item-link">default</a>
+                                                </li>
+                                                <li class="list__item">
+                                                    <a class="list__item-link">left sidebar</a>
+                                                </li>
+                                                <li class="list__item">
+                                                    <a class="list__item-link">slider post</a>
+                                                </li>
+                                                <li class="list__item">
+                                                    <a class="list__item-link">video post</a>
+                                                </li>
+                                                <li class="list__item">
+                                                    <a class="list__item-link">audio post</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="dropdown__item position-relative">
+                                            <a class="dropdown__item-link">
+                                                list
+                                                <i class="ti-angle-right"></i>
+                                            </a>
+
+                                            <ul class="dropdown__item-list">
+                                                <li class="list__item">
+                                                    <a class="list__item-link">left sidebar</a>
+                                                </li>
+                                                <li class="list__item">
+                                                    <a class="list__item-link">right sidebar</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="list__item">
+                                    <a class="list__item-link">
+                                        shop
+                                        <i class="ti-angle-down"></i>
+                                    </a>
+
+                                    <div class="list__item-dropdown mt-0">
+                                        <div class="dropdown__items">
+                                            <ul class="dropdown__items-list">
+                                                <li class="list__header">
+                                                    shop page layout 
+                                                </li>
+                                                <li class="list__item">
+                                                    <a class="list__item-link">shop list view</a>
+                                                </li>
+                                                <li class="list__item">
+                                                    <a class="list__item-link">shop list left sidebar</a>
+                                                </li>
+                                                <li class="list__item">
+                                                    <a class="list__item-link">shop list right sidebar</a>
+                                                </li>
+                                                <li class="list__item">
+                                                    <a class="list__item-link">left sidebar</a>
+                                                </li>
+                                                <li class="list__item">
+                                                    <a class="list__item-link">right sidebar</a>
+                                                </li>
+                                                <li class="list__item">
+                                                    <a class="list__item-link">shop load more</a>
+                                                </li>
+                                            </ul>
+    
+                                            <ul class="dropdown__items-list">
+                                                <li class="list__header">
+                                                    other pages
+                                                </li>
+                                                <li class="list__item">
+                                                    <a href="shop-cart.html" class="list__item-link">cart</a>
+                                                </li>
+                                                <li class="list__item">
+                                                    <a href="checkout.html" class="list__item-link">checkout</a>
+                                                </li>
+                                                <li class="list__item">
+                                                    <a href="my-account.html" class="list__item-link">my  account</a>
+                                                </li>
+                                                <li class="list__item">
+                                                    <a href="wishlist.html" class="list__item-link">wishlist</a>
+                                                </li>
+                                                <li class="list__item">
+                                                    <a href="compare.html" class="list__item-link">compare</a>
+                                                </li>
+                                                <li class="list__item">
+                                                    <a href="order-complete.html" class="list__item-link">order complete</a>
+                                                </li>
+                                            </ul>
+    
+                                            <ul class="dropdown__items-list">
+                                                <li class="list__header">
+                                                    product pages
+                                                </li>
+                                                <li class="list__item">
+                                                    <a class="list__item-link">default</a>
+                                                </li>
+                                                <li class="list__item">
+                                                    <a class="list__item-link">left sidebar</a>
+                                                </li>
+                                                <li class="list__item">
+                                                    <a class="list__item-link">right sidebar</a>
+                                                </li>
+                                                <li class="list__item">
+                                                    <a class="list__item-link">thumbnails left</a>
+                                                </li>
+                                            </ul>
+    
+                                            <ul class="dropdown__items-list">
+                                                <div class="list__sale">
+                                                    <div class="list__sale-banner position-relative">
+                                                        <div class="banner__image">
+                                                            <img src="assets/images/shop_banner1.jpg" alt="image">
+                                                        </div>
+            
+                                                        <div class="banner__info">
+                                                            <h5>NEW COLLECTION</h5>
+                                                            <h3>SALE 30% OFF</h3>
+                                                            <a>SHOP NOW</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="list__item">
+                                    <a class="list__item-link">contact us</a>
+                                </li>
+                            </ul>
+
+                            <ul class="bottom__navbar-icon d-flex align-items-center">
+                                <li class="icon__item">
+                                    <a class="icon__item-link" id="search">
+                                        <i class="lnr lnr-magnifier"></i>
+                                    </a>
+
+                                    <div class="icon__item-search">
+                                        <a class="search__close">
+                                            <i class="ti-close"></i>
+                                        </a>
+
+                                        <form action="#" class="search__form">
+                                            <input type="text" placeholder="Search">
+                                            <a class="search__form-btn">
+                                                <i class="lnr lnr-magnifier"></i>
+                                            </a>
+                                        </form>
+                                    </div>
+                                    <div class="icon__item-layout"></div>
+                                </li>
+                                <li class="icon__item position-relative">
+                                    <a class="icon__item-link">
+                                        <i class="lnr lnr-cart"></i>
+                                        <span class="link__count">2</span>
+                                    </a>
+
+                                    <div class="icon__item-dropdown">
+                                        <ul class="dropdown__list">
+                                            <li class="dropdown__list-item">
+                                                <a class="item__image">
+                                                    <img src="assets/images/cart_thamb1.jpg" alt="image">
+                                                </a>
+
+                                                <p class="item__info">
+                                                    <span>variable product 001</span>
+                                                    <span>1x$78.00</span>
+                                                </p>
+
+                                                <a class="item__close">
+                                                    <i class="ti-close"></i>
+                                                </a>
+                                            </li>
+                                            <li class="dropdown__list-item">
+                                                <a class="item__image">
+                                                    <img src="assets/images/cart_thamb2.jpg" alt="image">
+                                                </a>
+
+                                                <p class="item__info">
+                                                    <span>Ornare sed consequat1</span>
+                                                    <span>1x$81.00</span>
+                                                </p>
+
+                                                <a class="item__close">
+                                                    <i class="ti-close"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+
+                                        <div class="dropdown__footer">
+                                            <div class="dropdown__footer-total">
+                                                <span>subtotal:</span>
+                                                <span>$159.00</span>
+                                            </div>
+
+                                            <div class="dropdown__footer-btn">
+                                                <a class="btn__view">view cart</a>
+                                                <a class="btn__checkout">checkout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="icon__item">
+                                    <a class="icon__item-btn">
+                                        <i class="ti-menu"></i>
+                                    </a>
+
+                                    <ul class="icon__item-menu">
+                                        <li class="menu__item">
+                                            <a class="menu__item-link active">
+                                                home
+                                                <i class="ti-angle-down"></i>
+                                            </a>
+                                            
+
+                                            <ul class="menu__item-dropdown">
+                                                <li class="dropdown__item">
+                                                    <a class="dropdown__item-link">fashion 1</a>
+                                                </li>
+                                                <li class="dropdown__item">
+                                                    <a class="dropdown__item-link">fashion 2</a>
+                                                </li>
+                                                <li class="dropdown__item">
+                                                    <a class="dropdown__item-link active">furniture 1</a>
+                                                </li>
+                                                <li class="dropdown__item">
+                                                    <a class="dropdown__item-link"> furniture 2</a>
+                                                </li>
+                                                <li class="dropdown__item">
+                                                    <a class="dropdown__item-link">electronics 1</a>
+                                                </li>
+                                                <li class="dropdown__item">
+                                                    <a class="dropdown__item-link">electronics 2</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu__item">
+                                            <a class="menu__item-link">
+                                                pages
+                                                <i class="ti-angle-down"></i>
+                                            </a>
+
+                                            <ul class="menu__item-dropdown">
+                                                <li class="dropdown__item">
+                                                    <a class="dropdown__item-link">about us</a>
+                                                </li>
+                                                <li class="dropdown__item">
+                                                    <a class="dropdown__item-link">contact us</a>
+                                                </li>
+                                                <li class="dropdown__item">
+                                                    <a class="dropdown__item-link">faq</a>
+                                                </li>
+                                                <li class="dropdown__item">
+                                                    <a class="dropdown__item-link">404 error page</a>
+                                                </li>
+                                                <li class="dropdown__item">
+                                                    <a class="dropdown__item-link">login</a>
+                                                </li>
+                                                <li class="dropdown__item">
+                                                    <a class="dropdown__item-link">register</a>
+                                                </li>
+                                                <li class="dropdown__item">
+                                                    <a class="dropdown__item-link">terms and conditions</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu__item">
+                                            <a class="menu__item-link">
+                                                products
+                                                <i class="ti-angle-down"></i>
+                                            </a>
+
+                                            <div class="menu__item-dropdown">
+                                                <ul class="dropdown__list">
+                                                    <li class="dropdown__list-header">
+                                                        woman's
+                                                    </li>
+                                                    <li class="dropdown__list-item">
+                                                        <a class="item__link">vestibulum sed</a>
+                                                    </li>
+                                                    <li class="dropdown__list-item">
+                                                        <a class="item__link">donec porttitor</a>
+                                                    </li>
+                                                    <li class="dropdown__list-item">
+                                                        <a class="item__link">donec vitae facilisis</a>
+                                                    </li>
+                                                    <li class="dropdown__list-item">
+                                                        <a class="item__link">curabitur tempus</a>
+                                                    </li>
+                                                    <li class="dropdown__list-item">
+                                                        <a class="item__link">vivamus in tortor</a>
+                                                    </li>
+                                                </ul>
+        
+                                                <ul class="dropdown__list">
+                                                    <li class="dropdown__list-header">
+                                                        men's
+                                                    </li>
+                                                    <li class="dropdown__list-item">
+                                                        <a class="item__link">donec vitae ante ante</a>
+                                                    </li>
+                                                    <li class="dropdown__list-item">
+                                                        <a class="item__link">etiam ac rutrum</a>
+                                                    </li>
+                                                    <li class="dropdown__list-item">
+                                                        <a class="item__link">quisque condimentum</a>
+                                                    </li>
+                                                    <li class="dropdown__list-item">
+                                                        <a class="item__link">curabitur laoreet</a>
+                                                    </li>
+                                                    <li class="dropdown__list-item">
+                                                        <a class="item__link">vivamus in tortor</a>
+                                                    </li>
+                                                </ul>
+        
+                                                <ul class="dropdown__list">
+                                                    <li class="dropdown__list-header">
+                                                        kid's
+                                                    </li>
+                                                    <li class="dropdown__list-item">
+                                                        <a class="item__link">donec vitae facilisis</a>
+                                                    </li>
+                                                    <li class="dropdown__list-item">
+                                                        <a class="item__link">quisque condimentum</a>
+                                                    </li>
+                                                    <li class="dropdown__list-item">
+                                                        <a class="item__link">etiam ac rutrum</a>
+                                                    </li>
+                                                    <li class="dropdown__list-item">
+                                                        <a class="item__link">donec vitae ante ante</a>
+                                                    </li>
+                                                    <li class="dropdown__list-item">
+                                                        <a class="item__link">donec porttitor</a>
+                                                    </li>
+                                                </ul>
+        
+                                                <ul class="dropdown__list">
+                                                    <li class="dropdown__list-header">
+                                                        accessories
+                                                    </li>
+                                                    <li class="dropdown__list-item">
+                                                        <a class="item__link">donec vitae facilisis</a>
+                                                    </li>
+                                                    <li class="dropdown__list-item">
+                                                        <a class="item__link">quisque condimentum</a>
+                                                    </li>
+                                                    <li class="dropdown__list-item">
+                                                        <a class="item__link">etiam ac rutrum</a>
+                                                    </li>
+                                                    <li class="dropdown__list-item">
+                                                        <a class="item__link">donec vitae ante ante</a>
+                                                    </li>
+                                                    <li class="dropdown__list-item">
+                                                        <a class="item__link">donec porttitor</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="menu__item">
+                                            <a class="menu__item-link">
+                                                blog
+                                                <i class="ti-angle-down"></i>
+                                            </a>
+
+                                            <ul class="menu__item-dropdown">
+                                                <li class="dropdown__item">
+                                                    <a class="dropdown__item-link">
+                                                        grids
+                                                        <i class="ti-angle-down"></i>
+                                                    </a>
+        
+                                                    <ul class="dropdown__item-list">
+                                                        <li class="list__item">
+                                                            <a class="list__item-link">3 columns</a>
+                                                        </li>
+                                                        <li class="list__item">
+                                                            <a class="list__item-link">4 columns</a>
+                                                        </li>
+                                                        <li class="list__item">
+                                                            <a class="list__item-link">left sidebar</a>
+                                                        </li>
+                                                        <li class="list__item">
+                                                            <a class="list__item-link">right sidebar</a>
+                                                        </li>
+                                                        <li class="list__item">
+                                                            <a class="list__item-link">standard left sidebar</a>
+                                                        </li>
+                                                        <li class="list__item">
+                                                            <a class="list__item-link">standard right sidebar</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+        
+                                                <li class="dropdown__item">
+                                                    <a class="dropdown__item-link">
+                                                        masonry
+                                                        <i class="ti-angle-down"></i>
+                                                    </a>
+        
+                                                    <ul class="dropdown__item-list">
+                                                        <li class="list__item">
+                                                            <a class="list__item-link">3 columns</a>
+                                                        </li>
+                                                        <li class="list__item">
+                                                            <a class="list__item-link">4 columns</a>
+                                                        </li>
+                                                        <li class="list__item">
+                                                            <a class="list__item-link">left sidebar</a>
+                                                        </li>
+                                                        <li class="list__item">
+                                                            <a class="list__item-link">right sidebar</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+        
+                                                <li class="dropdown__item">
+                                                    <a class="dropdown__item-link">
+                                                        single-post
+                                                        <i class="ti-angle-down"></i>
+                                                    </a>
+        
+                                                    <ul class="dropdown__item-list">
+                                                        <li class="list__item">
+                                                            <a class="list__item-link">default</a>
+                                                        </li>
+                                                        <li class="list__item">
+                                                            <a class="list__item-link">left sidebar</a>
+                                                        </li>
+                                                        <li class="list__item">
+                                                            <a class="list__item-link">slider post</a>
+                                                        </li>
+                                                        <li class="list__item">
+                                                            <a class="list__item-link">video post</a>
+                                                        </li>
+                                                        <li class="list__item">
+                                                            <a class="list__item-link">audio post</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+        
+                                                <li class="dropdown__item">
+                                                    <a class="dropdown__item-link">
+                                                        list
+                                                        <i class="ti-angle-down"></i>
+                                                    </a>
+        
+                                                    <ul class="dropdown__item-list">
+                                                        <li class="list__item">
+                                                            <a class="list__item-link">left sidebar</a>
+                                                        </li>
+                                                        <li class="list__item">
+                                                            <a class="list__item-link">right sidebar</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu__item">
+                                            <a class="menu__item-link">
+                                                shop
+                                                <i class="ti-angle-down"></i>
+                                            </a>
+
+                                            <div class="menu__item-dropdown">
+                                                <ul class="dropdown__list">
+                                                    <li class="dropdown__list-header">
+                                                        shop page layout 
+                                                    </li>
+                                                    <li class="dropdown__list-item">
+                                                        <a class="item__link">shop list view</a>
+                                                    </li>
+                                                    <li class="dropdown__list-item">
+                                                        <a class="item__link">shop list left sidebar</a>
+                                                    </li>
+                                                    <li class="dropdown__list-item">
+                                                        <a class="item__link">shop list right sidebar</a>
+                                                    </li>
+                                                    <li class="dropdown__list-item">
+                                                        <a class="item__link">left sidebar</a>
+                                                    </li>
+                                                    <li class="dropdown__list-item">
+                                                        <a class="item__link">right sidebar</a>
+                                                    </li>
+                                                    <li class="dropdown__list-item">
+                                                        <a class="item__link">shop load more</a>
+                                                    </li>
+                                                </ul>
+        
+                                                <ul class="dropdown__list">
+                                                    <li class="dropdown__list-header">
+                                                        other pages
+                                                    </li>
+                                                    <li class="dropdown__list-item">
+                                                        <a class="item__link">cart</a>
+                                                    </li>
+                                                    <li class="dropdown__list-item">
+                                                        <a class="item__link">checkout</a>
+                                                    </li>
+                                                    <li class="dropdown__list-item">
+                                                        <a class="item__link">my  account</a>
+                                                    </li>
+                                                    <li class="dropdown__list-item">
+                                                        <a class="item__link">wishlist</a>
+                                                    </li>
+                                                    <li class="dropdown__list-item">
+                                                        <a class="item__link">compare</a>
+                                                    </li>
+                                                    <li class="dropdown__list-item">
+                                                        <a class="item__link">order complete</a>
+                                                    </li>
+                                                </ul>
+        
+                                                <ul class="dropdown__list">
+                                                    <li class="dropdown__list-header">
+                                                        product pages
+                                                    </li>
+                                                    <li class="dropdown__list-item">
+                                                        <a class="item__link">default</a>
+                                                    </li>
+                                                    <li class="dropdown__list-item">
+                                                        <a class="item__link">left sidebar</a>
+                                                    </li>
+                                                    <li class="dropdown__list-item">
+                                                        <a class="item__link">right sidebar</a>
+                                                    </li>
+                                                    <li class="dropdown__list-item">
+                                                        <a class="item__link">thumbnails left</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="menu__item">
+                                            <a class="menu__item-link">contact us</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Header -->
+
+        <!-- Start Banner -->
+        <div class="banner">
+            <div class="owl-carousel owl-theme banner__slide">
+                <div class="banner__item sofa">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-8 col-sm-9 col-10">
+                                <div class="banner__item-content">
+                                    <h6>new tranding</h6>
+                                    <h2>sofa collection</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                        Phasellus blandit massa enim. Nullam id varius nunc id varius 
+                                        nunc.</p>
+                                    <a href="#" class="content__btn1">shop now</a>                              
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="banner__item chair">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-8 col-sm-9 col-10">
+                                <div class="banner__item-content">
+                                    <h6>Get up to 50% off Today Only!</h6>
+                                    <h2>wooden chair collection</h2>
+                                    <a href="#" class="content__btn2">shop now</a>                              
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="banner__item living-room">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-8 col-sm-9 col-10">
+                                <div class="banner__item-content">
+                                    <h6>Taking your Viewing Experience to Next Level</h6>
+                                    <h2>living room collection</h2>
+                                    <a href="#" class="content__btn2">shop now</a>                              
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Banner -->
+
+        <!-- Start Service -->
+        <section class="service">
+            <div class="container">
+                <div class="row no-margin">
+                    <div class="col-lg-3 col-sm-6 no-pad">
+                        <div class="service__item">
+                            <div class="service__item-icon">
+                                <i class="flaticon-shipped"></i>
+                            </div>
+
+                            <div class="service__item-content">
+                                <h6>free delivery</h6>
+                                <p>worldwide</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 no-pad">
+                        <div class="service__item">
+                            <div class="service__item-icon">
+                                <i class="flaticon-money-back"></i>
+                            </div>
+
+                            <div class="service__item-content">
+                                <h6>money return</h6>
+                                <p>30 days money return</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 no-pad">
+                        <div class="service__item">
+                            <div class="service__item-icon">
+                                <i class="flaticon-support"></i>
+                            </div>
+
+                            <div class="service__item-content">
+                                <h6>24/7 online support</h6>
+                                <p>customer support</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 no-pad">
+                        <div class="service__item">
+                            <div class="service__item-icon">
+                                <i class="flaticon-secure-payment"></i>
+                            </div>
+
+                            <div class="service__item-content">
+                                <h6>payment security</h6>
+                                <p>safe payment</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Service -->
+
+        <!-- Start Exclusive Products -->
+        <section class="exclusive">
+            <div class="container">
+                <div class="title">
+                    <h2>exclusive products</h2>
+                </div>
+
+                <div class="divider-small"></div>
+
+                <div class="row">
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="item">
+                            <div class="item__image">
+                                <a><img src="assets/images/furniture_img1.jpg" alt="image"></a>
+
+                                <div class="item__image-action">
+                                    <ul class="action__list">
+                                        <li class="action__list-item">
+                                            <a class="item__link" data-toggle="modal" data-target="#compareModal">
+                                                <i class="ti-control-shuffle"></i>
+                                            </a>
+                                        </li>
+                                        <li class="action__list-item">
+                                            <a class="item__link" data-toggle="modal" data-target="#zoomModal">
+                                                <i class="ti-zoom-in"></i>
+                                            </a>
+                                        </li>
+                                        <li class="action__list-item">
+                                            <a class="item__link">
+                                                <i class="ti-heart"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="item__content">
+                                <h6 class="item__content-title">
+                                    <a href="product-detail.html">enim expedita sed</a>
+                                </h6>
+
+                                <div class="item__content-price">
+                                    <span>$45.00</span>
+                                    <del>$55.25</del>
+                                </div>
+
+                                <div class="item__content-rating">
+                                    <div class="rating__content">
+                                        <div class="rating__content-item"></div>
+                                    </div>
+
+                                    <span>(21)</span>
+                                </div>
+
+                                <div class="item__content-btn">
+                                    <a href="#" class="btn__add">
+                                        <i class="ti-shopping-cart-full"></i>
+                                        add to cart
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="item">
+                            <div class="item__image">
+                                <a><img src="assets/images/furniture_img2.jpg" alt="image"></a>
+
+                                <div class="item__image-action">
+                                    <ul class="action__list">
+                                        <li class="action__list-item">
+                                            <a class="item__link" data-toggle="modal" data-target="#compareModal">
+                                                <i class="ti-control-shuffle"></i>
+                                            </a>
+                                        </li>
+                                        <li class="action__list-item">
+                                            <a class="item__link" data-toggle="modal" data-target="#zoomModal">
+                                                <i class="ti-zoom-in"></i>
+                                            </a>
+                                        </li>
+                                        <li class="action__list-item">
+                                            <a class="item__link">
+                                                <i class="ti-heart"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="item__content">
+                                <h6 class="item__content-title">
+                                    <a href="product-detail.html">adipisci officia libero</a>
+                                </h6>
+
+                                <div class="item__content-price">
+                                    <span>$55.00</span>
+                                    <del>$95.00</del>
+                                </div>
+
+                                <div class="item__content-rating">
+                                    <div class="rating__content">
+                                        <div class="rating__content-item"></div>
+                                    </div>
+
+                                    <span>(15)</span>
+                                </div>
+
+                                <div class="item__content-btn">
+                                    <a href="#" class="btn__add">
+                                        <i class="ti-shopping-cart-full"></i>
+                                        add to cart
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="item">
+                            <div class="item__image">
+                                <a><img src="assets/images/furniture_img3.jpg" alt="image"></a>
+
+                                <div class="item__image-action">
+                                    <ul class="action__list">
+                                        <li class="action__list-item">
+                                            <a class="item__link" data-toggle="modal" data-target="#compareModal">
+                                                <i class="ti-control-shuffle"></i>
+                                            </a>
+                                        </li>
+                                        <li class="action__list-item">
+                                            <a class="item__link" data-toggle="modal" data-target="#zoomModal">
+                                                <i class="ti-zoom-in"></i>
+                                            </a>
+                                        </li>
+                                        <li class="action__list-item">
+                                            <a class="item__link">
+                                                <i class="ti-heart"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="item__content">
+                                <h6 class="item__content-title">
+                                    <a href="product-detail.html">Internet tend to repeat</a>
+                                </h6>
+
+                                <div class="item__content-price">
+                                    <span>$68.00</span>
+                                    <del>$99.00</del>
+                                </div>
+
+                                <div class="item__content-rating">
+                                    <div class="rating__content">
+                                        <div class="rating__content-item"></div>
+                                    </div>
+
+                                    <span>(25)</span>
+                                </div>
+
+                                <div class="item__content-btn">
+                                    <a href="#" class="btn__add">
+                                        <i class="ti-shopping-cart-full"></i>
+                                        add to cart
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="item">
+                            <div class="item__image">
+                                <a><img src="assets/images/furniture_img4.jpg" alt="image"></a>
+
+                                <div class="item__image-action">
+                                    <ul class="action__list">
+                                        <li class="action__list-item">
+                                            <a class="item__link" data-toggle="modal" data-target="#compareModal">
+                                                <i class="ti-control-shuffle"></i>
+                                            </a>
+                                        </li>
+                                        <li class="action__list-item">
+                                            <a class="item__link" data-toggle="modal" data-target="#zoomModal">
+                                                <i class="ti-zoom-in"></i>
+                                            </a>
+                                        </li>
+                                        <li class="action__list-item">
+                                            <a class="item__link">
+                                                <i class="ti-heart"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="item__content">
+                                <h6 class="item__content-title">
+                                    <a href="product-detail.html">many desktop publishing</a>
+                                </h6>
+
+                                <div class="item__content-price">
+                                    <span>$69.00</span>
+                                    <del>$89.00</del>
+                                </div>
+
+                                <div class="item__content-rating">
+                                    <div class="rating__content">
+                                        <div class="rating__content-item"></div>
+                                    </div>
+
+                                    <span>(22)</span>
+                                </div>
+
+                                <div class="item__content-btn">
+                                    <a href="#" class="btn__add">
+                                        <i class="ti-shopping-cart-full"></i>
+                                        add to cart
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="item">
+                            <div class="item__image">
+                                <a><img src="assets/images/furniture_img5.jpg" alt="image"></a>
+
+                                <div class="item__image-action">
+                                    <ul class="action__list">
+                                        <li class="action__list-item">
+                                            <a class="item__link" data-toggle="modal" data-target="#compareModal">
+                                                <i class="ti-control-shuffle"></i>
+                                            </a>
+                                        </li>
+                                        <li class="action__list-item">
+                                            <a class="item__link" data-toggle="modal" data-target="#zoomModal">
+                                                <i class="ti-zoom-in"></i>
+                                            </a>
+                                        </li>
+                                        <li class="action__list-item">
+                                            <a class="item__link">
+                                                <i class="ti-heart"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="item__content">
+                                <h6 class="item__content-title">
+                                    <a href="product-detail.html">injected humour repetition</a>
+                                </h6>
+
+                                <div class="item__content-price">
+                                    <span>$45.00</span>
+                                    <del>$55.25</del>
+                                </div>
+
+                                <div class="item__content-rating">
+                                    <div class="rating__content">
+                                        <div class="rating__content-item"></div>
+                                    </div>
+
+                                    <span>(21)</span>
+                                </div>
+
+                                <div class="item__content-btn">
+                                    <a href="#" class="btn__add">
+                                        <i class="ti-shopping-cart-full"></i>
+                                        add to cart
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="item">
+                            <div class="item__image">
+                                <a><img src="assets/images/furniture_img6.jpg" alt="image"></a>
+
+                                <div class="item__image-action">
+                                    <ul class="action__list">
+                                        <li class="action__list-item">
+                                            <a class="item__link" data-toggle="modal" data-target="#compareModal">
+                                                <i class="ti-control-shuffle"></i>
+                                            </a>
+                                        </li>
+                                        <li class="action__list-item">
+                                            <a class="item__link" data-toggle="modal" data-target="#zoomModal">
+                                                <i class="ti-zoom-in"></i>
+                                            </a>
+                                        </li>
+                                        <li class="action__list-item">
+                                            <a class="item__link">
+                                                <i class="ti-heart"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="item__content">
+                                <h6 class="item__content-title">
+                                    <a href="product-detail.html">randomised humour words</a>
+                                </h6>
+
+                                <div class="item__content-price">
+                                    <span>$55.00</span>
+                                    <del>$95.00</del>
+                                </div>
+
+                                <div class="item__content-rating">
+                                    <div class="rating__content">
+                                        <div class="rating__content-item"></div>
+                                    </div>
+
+                                    <span>(15)</span>
+                                </div>
+
+                                <div class="item__content-btn">
+                                    <a href="#" class="btn__add">
+                                        <i class="ti-shopping-cart-full"></i>
+                                        add to cart
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="item">
+                            <div class="item__image">
+                                <a><img src="assets/images/furniture_img7.jpg" alt="image"></a>
+
+                                <div class="item__image-action">
+                                    <ul class="action__list">
+                                        <li class="action__list-item">
+                                            <a class="item__link" data-toggle="modal" data-target="#compareModal">
+                                                <i class="ti-control-shuffle"></i>
+                                            </a>
+                                        </li>
+                                        <li class="action__list-item">
+                                            <a class="item__link" data-toggle="modal" data-target="#zoomModal">
+                                                <i class="ti-zoom-in"></i>
+                                            </a>
+                                        </li>
+                                        <li class="action__list-item">
+                                            <a class="item__link">
+                                                <i class="ti-heart"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="item__content">
+                                <h6 class="item__content-title">
+                                    <a href="product-detail.html">expedita distinctio rerum</a>
+                                </h6>
+
+                                <div class="item__content-price">
+                                    <span>$68.00</span>
+                                    <del>$99.00</del>
+                                </div>
+
+                                <div class="item__content-rating">
+                                    <div class="rating__content">
+                                        <div class="rating__content-item"></div>
+                                    </div>
+
+                                    <span>(25)</span>
+                                </div>
+
+                                <div class="item__content-btn">
+                                    <a href="#" class="btn__add">
+                                        <i class="ti-shopping-cart-full"></i>
+                                        add to cart
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="item">
+                            <div class="item__image">
+                                <a><img src="assets/images/furniture_img8.jpg" alt="image"></a>
+
+                                <div class="item__image-action">
+                                    <ul class="action__list">
+                                        <li class="action__list-item">
+                                            <a class="item__link" data-toggle="modal" data-target="#compareModal">
+                                                <i class="ti-control-shuffle"></i>
+                                            </a>
+                                        </li>
+                                        <li class="action__list-item">
+                                            <a class="item__link" data-toggle="modal" data-target="#zoomModal">
+                                                <i class="ti-zoom-in"></i>
+                                            </a>
+                                        </li>
+                                        <li class="action__list-item">
+                                            <a class="item__link">
+                                                <i class="ti-heart"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="item__content">
+                                <h6 class="item__content-title">
+                                    <a href="product-detail.html">itaque earum rerum</a>
+                                </h6>
+
+                                <div class="item__content-price">
+                                    <span>$69.00</span>
+                                    <del>$89.00</del>
+                                    <span class="price__sale">20% Off</span>
+                                </div>
+
+                                <div class="item__content-rating">
+                                    <div class="rating__content">
+                                        <div class="rating__content-item"></div>
+                                    </div>
+
+                                    <span>(22)</span>
+                                </div>
+
+                                <div class="item__content-btn">
+                                    <a href="#" class="btn__add">
+                                        <i class="ti-shopping-cart-full"></i>
+                                        add to cart
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Exclusive Products -->
+
+        <!-- Start Sale -->
+        <section class="sale">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="sale__item">
+                            <img src="assets/images/furniture_banner1.jpg" alt="image">
+
+                            <div class="sale__item-info">
+                                <h5 class="info__title1">super sale</h5>
+                                <h3 class="info__title">new collection</h3>
+                                <a href="#" class="info__btn">shop now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-7">
+                        <div class="sale__item">
+                            <img src="assets/images/furniture_banner2.jpg" alt="image">
+
+                            <div class="sale__item-info1">
+                                <h3 class="info__title">new season</h3>
+                                <h5 class="info__title1">sale 40% off</h5>
+                                <a href="#" class="info__btn">shop now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Sale -->
+
+        <!-- Start Trending Items -->
+        <section class="trending">
+            <div class="container">
+                <div class="title">
+                    <h2>trending items</h2>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="owl-carousel owl-theme trending__slide">
+                    <div class="item">
+                        <div class="item__image">
+                            <a><img src="assets/images/furniture_img1.jpg" alt="image"></a>
+
+                            <div class="item__image-action">
+                                <ul class="action__list">
+                                    <li class="action__list-item">
+                                        <a class="item__link" data-toggle="modal" data-target="#compareModal">
+                                            <i class="ti-control-shuffle"></i>
+                                        </a>
+                                    </li>
+                                    <li class="action__list-item">
+                                        <a class="item__link" data-toggle="modal" data-target="#zoomModal">
+                                            <i class="ti-zoom-in"></i>
+                                        </a>
+                                    </li>
+                                    <li class="action__list-item">
+                                        <a class="item__link">
+                                            <i class="ti-heart"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="item__content">
+                            <h6 class="item__content-title">
+                                <a href="product-detail.html">enim expedita sed</a>
+                            </h6>
+
+                            <div class="item__content-price">
+                                <span>$45.00</span>
+                                <del>$55.25</del>
+                            </div>
+
+                            <div class="item__content-rating">
+                                <div class="rating__content">
+                                    <div class="rating__content-item w-80"></div>
+                                </div>
+
+                                <span>(21)</span>
+                            </div>
+
+                            <div class="item__content-btn">
+                                <a href="#" class="btn__add">
+                                    <i class="ti-shopping-cart-full"></i>
+                                    add to cart
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="item">
+                        <div class="item__image">
+                            <a><img src="assets/images/furniture_img2.jpg" alt="image"></a>
+
+                            <div class="item__image-action">
+                                <ul class="action__list">
+                                    <li class="action__list-item">
+                                        <a class="item__link" data-toggle="modal" data-target="#compareModal">
+                                            <i class="ti-control-shuffle"></i>
+                                        </a>
+                                    </li>
+                                    <li class="action__list-item">
+                                        <a class="item__link" data-toggle="modal" data-target="#zoomModal">
+                                            <i class="ti-zoom-in"></i>
+                                        </a>
+                                    </li>
+                                    <li class="action__list-item">
+                                        <a class="item__link">
+                                            <i class="ti-heart"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="item__content">
+                            <h6 class="item__content-title">
+                                <a href="product-detail.html">adipisci officia libero</a>
+                            </h6>
+
+                            <div class="item__content-price">
+                                <span>$55.00</span>
+                                <del>$95.00</del>
+                            </div>
+
+                            <div class="item__content-rating">
+                                <div class="rating__content">
+                                    <div class="rating__content-item w-68"></div>
+                                </div>
+
+                                <span>(15)</span>
+                            </div>
+
+                            <div class="item__content-btn">
+                                <a href="#" class="btn__add">
+                                    <i class="ti-shopping-cart-full"></i>
+                                    add to cart
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item__image">
+                            <a><img src="assets/images/furniture_img3.jpg" alt="image"></a>
+
+                            <div class="item__image-action">
+                                <ul class="action__list">
+                                    <li class="action__list-item">
+                                        <a class="item__link" data-toggle="modal" data-target="#compareModal">
+                                            <i class="ti-control-shuffle"></i>
+                                        </a>
+                                    </li>
+                                    <li class="action__list-item">
+                                        <a class="item__link" data-toggle="modal" data-target="#zoomModal">
+                                            <i class="ti-zoom-in"></i>
+                                        </a>
+                                    </li>
+                                    <li class="action__list-item">
+                                        <a class="item__link">
+                                            <i class="ti-heart"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="item__content">
+                            <h6 class="item__content-title">
+                                <a href="product-detail.html">internet tend to repeat</a>
+                            </h6>
+
+                            <div class="item__content-price">
+                                <span>$68.00</span>
+                                <del>$99.00</del>
+                            </div>
+
+                            <div class="item__content-rating">
+                                <div class="rating__content">
+                                    <div class="rating__content-item w-87"></div>
+                                </div>
+
+                                <span>(25)</span>
+                            </div>
+
+                            <div class="item__content-btn">
+                                <a href="#" class="btn__add">
+                                    <i class="ti-shopping-cart-full"></i>
+                                    add to cart
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item__image">
+                            <a><img src="assets/images/furniture_img4.jpg" alt="image"></a>
+
+                            <div class="item__image-action">
+                                <ul class="action__list">
+                                    <li class="action__list-item">
+                                        <a class="item__link" data-toggle="modal" data-target="#compareModal">
+                                            <i class="ti-control-shuffle"></i>
+                                        </a>
+                                    </li>
+                                    <li class="action__list-item">
+                                        <a class="item__link" data-toggle="modal" data-target="#zoomModal">
+                                            <i class="ti-zoom-in"></i>
+                                        </a>
+                                    </li>
+                                    <li class="action__list-item">
+                                        <a class="item__link">
+                                            <i class="ti-heart"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="item__content">
+                            <h6 class="item__content-title">
+                                <a href="product-detail.html">many desktop publishing</a>
+                            </h6>
+
+                            <div class="item__content-price">
+                                <span>$69.00</span>
+                                <del>$89.00</del>
+                            </div>
+
+                            <div class="item__content-rating">
+                                <div class="rating__content">
+                                    <div class="rating__content-item w-70"></div>
+                                </div>
+
+                                <span>(21)</span>
+                            </div>
+
+                            <div class="item__content-btn">
+                                <a href="#" class="btn__add">
+                                    <i class="ti-shopping-cart-full"></i>
+                                    add to cart
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item__image">
+                            <a><img src="assets/images/furniture_img5.jpg" alt="image"></a>
+
+                            <div class="item__image-action">
+                                    <ul class="action__list">
+                                        <li class="action__list-item">
+                                            <a class="item__link" data-toggle="modal" data-target="#compareModal">
+                                                <i class="ti-control-shuffle"></i>
+                                            </a>
+                                        </li>
+                                        <li class="action__list-item">
+                                            <a class="item__link" data-toggle="modal" data-target="#zoomModal">
+                                                <i class="ti-zoom-in"></i>
+                                            </a>
+                                        </li>
+                                        <li class="action__list-item">
+                                            <a class="item__link">
+                                                <i class="ti-heart"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                            </div>
+                        </div>
+
+                        <div class="item__content">
+                                <h6 class="item__content-title">
+                                    <a href="product-detail.html">injected humour repetition</a>
+                                </h6>
+
+                                <div class="item__content-price">
+                                    <span>$45.00</span>
+                                    <del>$55.25</del>
+                                </div>
+
+                                <div class="item__content-rating">
+                                    <div class="rating__content">
+                                        <div class="rating__content-item w-80"></div>
+                                    </div>
+
+                                    <span>(21)</span>
+                                </div>
+
+                                <div class="item__content-btn">
+                                    <a href="#" class="btn__add">
+                                        <i class="ti-shopping-cart-full"></i>
+                                        add to cart
+                                    </a>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                            <div class="item__image">
+                                <a><img src="assets/images/furniture_img6.jpg" alt="image"></a>
+
+                                <div class="item__image-action">
+                                    <ul class="action__list">
+                                        <li class="action__list-item">
+                                            <a class="item__link" data-toggle="modal" data-target="#compareModal">
+                                                <i class="ti-control-shuffle"></i>
+                                            </a>
+                                        </li>
+                                        <li class="action__list-item">
+                                            <a class="item__link" data-toggle="modal" data-target="#zoomModal">
+                                                <i class="ti-zoom-in"></i>
+                                            </a>
+                                        </li>
+                                        <li class="action__list-item">
+                                            <a class="item__link">
+                                                <i class="ti-heart"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="item__content">
+                                <h6 class="item__content-title">
+                                    <a href="product-detail.html">randomised humour words</a>
+                                </h6>
+
+                                <div class="item__content-price">
+                                    <span>$55.00</span>
+                                    <del>$95.00</del>
+                                </div>
+
+                                <div class="item__content-rating">
+                                    <div class="rating__content">
+                                        <div class="rating__content-item w-68"></div>
+                                    </div>
+
+                                    <span>(15)</span>
+                                </div>
+
+                                <div class="item__content-btn">
+                                    <a href="#" class="btn__add">
+                                        <i class="ti-shopping-cart-full"></i>
+                                        add to cart
+                                    </a>
+                                </div>
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Start Trending Items -->
+
+        <!-- Start Instagram -->
+        <section class="instagram">
+            <div class="container-fluid position-relative">
+                <div class="instagram__follow">
+                    <i class="ti-instagram"></i>
+                    <h3>instagram</h3>
+                    <span>@shoppingzone</span>
+                </div>
+
+                <div class="owl-carousel owl-theme instagram__slide">
+                    <div class="instagram__slide-item">
+                        <a data-fancybox="gallery" href="assets/images/furniture_insta1.jpg">
+                            <img src="assets/images/furniture_insta1.jpg" alt="furniture_insta1">
+                        </a>
+                    </div>
+
+                    <div class="instagram__slide-item">
+                        <a data-fancybox="gallery" href="assets/images/furniture_insta2.jpg">
+                            <img src="assets/images/furniture_insta2.jpg" alt="furniture_insta2">
+                        </a>
+                    </div>
+    
+                    <div class="instagram__slide-item">
+                        <a data-fancybox="gallery" href="assets/images/furniture_insta3.jpg">
+                            <img src="assets/images/furniture_insta3.jpg" alt="furniture_insta3">
+                        </a>
+                    </div>
+            
+                    <div class="instagram__slide-item">
+                        <a data-fancybox="gallery" href="assets/images/furniture_insta4.jpg">
+                            <img src="assets/images/furniture_insta4.jpg" alt="furniture_insta4">
+                        </a>
+                    </div>
+        
+                    <div class="instagram__slide-item">
+                        <a data-fancybox="gallery" href="assets/images/furniture_insta5.jpg">
+                            <img src="assets/images/furniture_insta5.jpg" alt="furniture_insta5">
+                        </a>
+                    </div>
+                
+                    <div class="instagram__slide-item">
+                        <a data-fancybox="gallery" href="assets/images/furniture_insta6.jpg">
+                            <img src="assets/images/furniture_insta6.jpg" alt="furniture_insta6">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Instagram -->
+
+        <!-- Strat Client -->
+        <section class="client">
+            <div class="container">
+                <div class="owl-carousel owl-theme client__slide">
+
+                    <div class="client__slide-logo">
+                        <img src="assets/images/cl_logo1.png" alt="cl_logo1">
+                    </div>
+                    
+                    <div class="client__slide-logo">
+                        <img src="assets/images/cl_logo2.png" alt="cl_logo2">
+                    </div>
+
+                    <div class="client__slide-logo">
+                        <img src="assets/images/cl_logo3.png" alt="cl_logo3">
+                    </div>
+                    
+                    <div class="client__slide-logo">
+                        <img src="assets/images/cl_logo4.png" alt="cl_logo4">
+                    </div>
+                   
+                    <div class="client__slide-logo">
+                        <img src="assets/images/cl_logo5.png" alt="cl_logo5">
+                    </div>
+                    
+                    <div class="client__slide-logo">
+                        <img src="assets/images/cl_logo6.png" alt="cl_logo6">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Client -->
+
+        <!-- Start Footer -->
+        <div class="footer">
+            <div class="footer__top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="footer__top-contact">
+                                <h6>contact info</h6>
+                                <ul class="contact__info">
+                                    <li class="contact__info-item">
+                                        <i class="ti-location-pin"></i>
+                                        <p>123 Street, Old Trafford, NewYork, USA</p>
+                                    </li>
+                                    <li class="contact__info-item">
+                                        <i class="ti-email"></i>
+                                        <a href="#">info@sitename.com</a>
+                                    </li>
+                                    <li class="contact__info-item">
+                                        <i class="ti-mobile"></i>
+                                        <p>+ 457 789 789 65</p>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <ul class="footer__top-social">
+                                <li class="social__item">
+                                    <a class="social__item-facebook">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                </li>
+                                <li class="social__item">
+                                    <a class="social__item-twitter">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li class="social__item">
+                                    <a class="social__item-google">
+                                        <i class="fab fa-google-plus-g"></i>
+                                    </a>
+                                </li>
+                                <li class="social__item">
+                                    <a class="social__item-youtube">
+                                        <i class="fab fa-youtube"></i>
+                                    </a>
+                                </li>
+                                <li class="social__item">
+                                    <a class="social__item-instagram">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-2 col-md-3 col-sm-6">
+                            <div class="footer__top-links">
+                                <h6>useful links</h6>
+                                <ul class="links__list">
+                                    <li class="links__list-item"><a href="#">About Us</a></li>
+                                    <li class="links__list-item"><a href="#">FAQ</a></li>
+                                    <li class="links__list-item"><a href="#">Location</a></li>
+                                    <li class="links__list-item"><a href="#">Affiliates</a></li>
+                                    <li class="links__list-item"><a href="#">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-2 col-md-3 col-sm-6">
+                            <div class="footer__top-account">
+                                <h6>my account</h6>
+                                <ul class="account__list">
+                                    <li class="account__list-item"><a href="#">My Account</a></li>
+                                    <li class="account__list-item"><a href="#">Discount</a></li>
+                                    <li class="account__list-item"><a href="#">Returns</a></li>
+                                    <li class="account__list-item"><a href="#">Order History</a></li>
+                                    <li class="account__list-item"><a href="#">Order Tracking</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-12 col-sm-12">
+                            <div class="footer__top-subcribe">
+                                <h6>subcribe our newsletter</h6>
+                                <p>If you want to get an email from us every time we have a new 
+                                    special offer, then sign up here!</p>
+                                <form action="#">
+                                    <input type="text" required placeholder="enter email address">
+                                    <button type="submit" name="submit" value="Submit">
+                                        <i class="fas fa-envelope-open-text"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>© 2020 All Rights Reserved by Bestwebcreator</p>
+                        </div>
+
+                        <div class="col-md-6">
+                            <ul class="footer__bottom-payment">
+                                <li class="payment__item">
+                                    <a class="payment__item-link">
+                                        <img src="assets/images/visa.png" alt="visa">
+                                    </a>
+                                </li>
+                                <li class="payment__item">
+                                    <a class="payment__item-link">
+                                        <img src="assets/images/discover.png" alt="discover">
+                                    </a>
+                                </li>
+                                <li class="payment__item">
+                                    <a class="payment__item-link">
+                                        <img src="assets/images/master_card.png" alt="master_card">
+                                    </a>
+                                </li>
+                                <li class="payment__item">
+                                    <a class="payment__item-link">
+                                        <img src="assets/images/paypal.png" alt="paypal">
+                                    </a>
+                                </li>
+                                <li class="payment__item">
+                                    <a class="payment__item-link">
+                                        <img src="assets/images/amarican_express.png" alt="amarican_express">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Footer -->
+
+        <!-- Strat Scroll Up -->
+        <div class="scroll">
+            <a href="#" class="scroll__up">
+                <i class="fas fa-chevron-up"></i>
+            </a>
+        </div>
+        <!-- End Scroll Up -->
+    </div>
+
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!-- ElevateZoom -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/elevatezoom/3.0.8/jquery.elevatezoom.min.js"></script>
+    <!-- Counter Up JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script> 
+    <!-- Fancy Box JS -->
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <!-- WOW JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Owl Carousel JS -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

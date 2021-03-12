@@ -1,0 +1,108 @@
+/*======================== Contact Info ========================*/
+.info{
+    padding-bottom: 70px;
+
+    @include max-breakpoint(1199){
+        padding-bottom: 50px;
+    }
+
+    @include max-breakpoint(767){
+        padding-bottom: 20px;
+    }
+
+    @include max-breakpoint(575){
+        padding-bottom: 15px;
+    }
+
+    &__item{
+        text-align: center;
+        margin-bottom: 30px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        padding: 40px 20px;
+        border-radius: 10px;
+
+        &-icon{
+            position: relative;
+            z-index: 1;
+            display: inline-block;
+            height: 80px;
+            width: 80px;
+            border: 1px solid $color-FF324D;
+            border-radius: 100%;
+            margin-bottom: 10px;
+
+            @include max-breakpoint(480){
+                height: 70px;
+                width: 70px;
+            }
+
+            &::before{
+                content: "";
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                background-color: $color-FF324D;
+                border-radius: 100%;
+                transition: all .6s ease-in-out;
+                transform: scale(0);
+            }
+
+            i{
+                font-size: 34px;
+                line-height: 78px;
+                color: $color-FF324D;
+                transition: all .3s ease-in-out;
+                position: relative;
+
+                @include max-breakpoint(480){
+                    font-size: 30px;
+                    line-height: 68px;
+                }
+            }
+        }
+
+        &-text{
+            span{
+                display: block;
+                color: $color-333;
+                text-transform: capitalize;
+                font-weight: 600;
+                margin-bottom: 3px;
+
+                @include max-breakpoint(480){
+                    font-size: 14px;
+                }
+            }
+
+            p{
+                margin-bottom: 0;
+
+                @include max-breakpoint(480){
+                    font-size: 14px;
+                }
+            }
+
+            a{
+                color: #6c757d;
+                cursor: pointer;
+                transition: all .3s ease-in-out;
+
+                &:hover{
+                    color: $color-FF324D;
+                }
+            }
+        }
+
+        &:hover{
+            .info__item-icon::before{
+                transform: scale(1);
+            }
+
+            i{
+                color: $color-white;
+            }
+        }
+    }
+}

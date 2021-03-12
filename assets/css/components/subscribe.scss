@@ -1,0 +1,83 @@
+/*======================== Subcribe ========================*/
+.subscribe{
+    padding: 50px 0;
+    background-color: $color-FF324D;
+
+    @include max-breakpoint(1199){
+        padding: 40px 0;
+    }
+
+    @include max-breakpoint(767){
+        padding: 25px 0;
+    }
+
+    @include max-breakpoint(575){
+        padding: 15px 0;
+    }
+
+    &__text{
+        font-size: 1.75rem;
+        font-weight: 700;
+        margin: 0;
+        text-transform: capitalize;
+        color: $color-white;
+
+        @include max-breakpoint(1199){
+            font-size: 24px;
+        }
+
+        @include max-breakpoint(991){
+            margin-bottom: 20px;
+        }
+
+        @include max-breakpoint(380){
+            font-size: 20px;
+        }
+    }
+
+    &__form{
+        text-align: right;
+        position: relative;
+
+        input{
+            border: none;
+            border-radius: 0;
+            
+
+            @include max-breakpoint(380){
+                
+                padding: 10px 140px 10px 20px;
+            }
+        }
+
+        &-btn{
+            @include button_hover_background();
+            @include center-vertical();
+            right: 0;
+            padding: 12px 35px;
+            font-size: 1rem;
+            font-weight: 400;
+            color: $color-white;
+            background-color: $color-333;
+            border-color: $color-333;
+            text-transform: capitalize;
+            border: 1px solid transparent;
+
+            @include max-breakpoint(991){
+                padding: 12px 25px;
+                font-size: 16px;
+            }
+
+            @include max-breakpoint(380){
+                padding: 10px 15px;
+                font-size: 14px;
+            }
+
+            &:hover{
+                color: $color-white;
+                background-color: $color-292b2c;
+                border-color: $color-292b2c;
+            }
+        }
+    }
+}

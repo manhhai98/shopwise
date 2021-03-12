@@ -1,0 +1,104 @@
+/*======================== Team Members ========================*/
+.team{
+    padding-bottom: 70px;
+
+    @include max-breakpoint(1199){
+        padding-bottom: 50px;
+    }
+
+    @include max-breakpoint(767){
+        padding-bottom: 20px;
+    }
+
+    @include max-breakpoint(575){
+        padding-bottom: 15px;
+    }
+
+    &__item{
+        @include max-breakpoint(575){
+            margin-bottom: 15px;
+        }
+
+        &-image{
+            position: relative;
+
+            img{
+                width: 100%;
+            }
+
+            &::before{
+                @include layout();
+            }
+
+            .image__social{
+                @include center-vertical();
+                top: 0;
+                right: 0;
+                left: 0;
+                text-align: center;
+                z-index: 1;
+                opacity: 0;
+                @include single-transition(all, 0.5s, ease-in-out, 0s);
+
+                &-item{
+                    display: inline-block;
+
+                    .item__link{
+                        display: inline-block;
+                        background-color: $color-white;
+                        color: $color-FF324D;
+                        line-height: 36px;
+                        height: 36px;
+                        width: 36px;
+                        text-align: center;
+                        cursor: pointer;
+                        @include single-transition(all, .3s, ease-in-out, 0s);
+
+                        &:hover{
+                            color: $color-white;
+                            background-color: $color-FF324D;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-content{
+            margin-top: 15px;
+
+            h5{
+                font-size: 1.25rem;
+                color: $color-292b2c;
+                font-weight: 600;
+                text-transform: capitalize;
+
+                @include max-breakpoint(1199){
+                    font-size: 18px;
+                }
+
+                @include max-breakpoint(480){
+                    font-size: 16px;
+                }
+            }
+
+            span{
+                text-transform: capitalize;
+
+                @include max-breakpoint(480){
+                    font-size: 14px;
+                }
+            }
+        }
+
+        &:hover{
+            .team__item-image::before{
+                opacity: 1;
+            }
+
+            .image__social{
+                opacity: 1;
+                top: 50%;
+            }
+        }
+    }
+}

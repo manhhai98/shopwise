@@ -1,0 +1,76 @@
+/*======================== Service ========================*/
+.service{
+    padding-bottom: 50px;
+
+    @include max-breakpoint(1199){
+        padding-bottom: 40px;
+
+        .no-margin{
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+
+    @include max-breakpoint(767){
+        padding-bottom: 25px;
+    }
+
+    @include max-breakpoint(575){
+        padding-bottom: 15px;
+    }
+
+    .no-pad{
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    &__item{
+        border: 1px solid #ddd;
+        padding: 30px;
+        margin-bottom: 0;
+        display: flex;
+        align-items: center;
+
+        @include max-breakpoint(1199){
+            padding: 15px;
+        }
+
+        &-icon{
+            margin-right: 20px;
+            
+            @include max-breakpoint(1199){
+                margin-right: 13px;
+            }
+
+            i{
+                color: $color-FF324D;
+
+                &::before{
+                    margin-left: 0;
+                    font-size: 36px;
+
+                    @include max-breakpoint(1199){
+                        font-size: 32px;
+                    }
+                }
+            }
+        }
+
+        &-content{
+            h6{
+                color: $color-292b2c;
+                text-transform: capitalize;
+
+                @include max-breakpoint(480){
+                    font-size: 14px;
+                }
+            }
+
+            p{
+                font-size: 14px;
+                margin-bottom: 0;
+                text-transform: capitalize;
+            }
+        }
+    }
+}

@@ -1,0 +1,230 @@
+/*======================== Shopping Cart ========================*/
+.shop{
+    padding-top: 100px;
+
+    @include max-breakpoint(1199){
+        padding-top: 80px 0;
+    }
+
+    @include max-breakpoint(767){
+        padding-top: 50px 0;
+
+        thead{
+            display: none;
+        }
+    }
+
+    @include max-breakpoint(575){
+        padding-top: 30px 0;
+    }
+    .table{
+        color: $color-292b2c;
+
+        th{
+            vertical-align: middle;
+            text-align: center;
+
+            &.shop__name{
+                text-align: left;
+            }
+        }
+
+        td{
+            vertical-align: middle;
+            text-align: center;
+
+            @include max-breakpoint(991){
+                padding: .3rem;
+            }
+
+            @include max-breakpoint(767){
+                width: 100%;
+                display: block;
+                padding: .75rem;
+
+                &.shop__quantity{
+                    text-align: right;
+                }
+
+                &::before{
+                    content: attr(data-title) " ";
+                    float: left;
+                    text-transform: capitalize;
+                    margin-right: 15px;
+                    font-weight: bold;
+                }
+            }
+
+            &.shop__name{
+                text-align: left;
+
+                @include max-breakpoint(767){
+                    text-align: right;
+                }
+                
+                a{
+                    cursor: pointer;
+                    @include single-transition(all, 0.3s, ease-in-out, 0s);
+
+                    &:hover{
+                        color: $color-FF324D;
+                    }
+                }
+            }
+
+            img{
+                max-width: 100px;
+
+                @include max-breakpoint(991){
+                    max-width: 80px;
+                }
+            }
+
+            &.shop__total, &.shop__price{
+                font-weight: 600;
+
+                @include max-breakpoint(767){
+                    text-align: right;
+                }
+            }
+
+            &.shop__remove{
+                @include max-breakpoint(767){
+                    text-align: right;
+                }
+
+                i{
+                    height: 30px;
+                    width: 30px;
+                    color: $color-292b2c;
+                    display: inline-block;
+                    line-height: 30px;
+                    text-align: center;
+                    border-radius: 100%;
+                    font-size: 14px;
+
+                    &:hover{
+                        background-color: #F00;
+                        color: $color-white;
+                    }
+                }
+            }
+
+            .shop__coupon{
+                display: flex;
+                position: relative;
+
+                @include max-breakpoint(767){
+                    margin-bottom: 1rem;
+                }
+                
+
+                input{
+                    height: 40px;
+                    display: block;
+                    width: 1%;
+                    flex: 1 1 auto;
+                    padding: 8px 15px;
+                    border: 1px solid #ced4da;
+                    border-radius: .25rem;
+                    font-size: .875rem;
+                    border-right: none;
+                    border-top-right-radius: 0;
+                    border-bottom-right-radius: 0;
+                    @include single-transition(border-color, 0.15s, ease-in-out, 0s);
+
+                    &:focus{
+                        border-color: #80bdff;
+                    }
+                }
+
+                &-add{
+                    .add__btn{
+                        @include button_hover_background();
+                        padding: 8px 11px;
+                        border-radius: .25rem;
+                        font-size: .875rem;
+                        border-top-left-radius: 0;
+                        border-bottom-left-radius: 0;
+                        border: 1px solid $color-FF324D;
+                        color: $color-white;
+
+                        &::after{
+                            @include button_background();
+                            left: 0;
+                            background-color: $color-FF324D;
+                        }
+
+                        &::before{
+                            @include button_background();
+                            right: 0;
+                            background-color: $color-FF324D;
+                        }
+
+                        &:hover{
+                            color: $color-FF324D;
+                            &::after, &::before{
+                                width: 0;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .shop__update{
+                text-align: right;
+
+                @include max-breakpoint(767){
+                    text-align: left
+                }
+
+                &-btn{
+                    @include button_hover_background();
+                    padding: 8px 11px;
+                    border-radius: .25rem;
+                    font-size: .875rem;
+                    border: 1px solid $color-333;
+                    color: $color-333;
+
+                    &::after{
+                        position: absolute;
+                        top: 50%;
+                        content: '';
+                        width: 20px;
+                        height: 20px;
+                        background-color: $color-333;
+                        border-radius: 50%;
+                        z-index: -1;
+                        left: -20px;
+                        transform: translate(-50%, -50%);
+                    }
+
+                    &::before{
+                        position: absolute;
+                        top: 50%;
+                        content: '';
+                        width: 20px;
+                        height: 20px;
+                        background-color: $color-333;
+                        border-radius: 50%;
+                        z-index: -1;
+                        right: -20px;
+                        transform: translate(50%, -50%);
+                    }
+
+                    &:hover{
+                        color: $color-white;
+
+                        &::after{
+                            @include animation(criss-cross-left 0.7s both);
+                        }
+
+                        &::before{
+                            @include animation(criss-cross-right 0.7s both);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

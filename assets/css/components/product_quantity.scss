@@ -1,0 +1,31 @@
+.quantity{
+    margin: 7px 10px 7px 0;
+    display: inline-block;
+
+    &__plus, &__minus{
+        background-color: #eee;
+        display: block;
+        float: left;
+        border-radius: 50px;
+        cursor: pointer;
+        padding: 0;
+        width: 34px;
+        height: 34px;
+        line-height: 36px;
+        text-align: center;
+        font-size: 20px;
+        margin: 4px;
+        border: none;
+    }
+
+    &__qtn{
+        float: left;
+        width: 55px;
+        height: 36px;
+        border: 1px solid #ddd;
+        background-color: transparent;
+        text-align: center;
+        padding: 0;
+        margin: 3px;
+    }
+}

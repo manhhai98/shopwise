@@ -1,0 +1,35 @@
+/*========================13. Client========================*/
+.client{
+    padding-top: 50px;
+    padding-bottom: 20px;
+
+    @include max-breakpoint(1199){
+        padding-top: 40px;
+        padding-bottom: 10px;
+    }
+
+    @include max-breakpoint(767){
+        padding-top: 25px;
+        padding-bottom: 0;
+    }
+
+    @include max-breakpoint(575){
+        padding-top: 15px;
+    }
+
+
+    &__slide-logo{
+        img{
+            margin: 0 auto;
+            width: 163px;
+            opacity: 0.7;
+            transition: all 0.5s ease-in-out;
+        }
+    
+        &:hover{
+            img{
+                opacity: 1;
+            }
+        }
+    }
+}

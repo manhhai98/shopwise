@@ -1,0 +1,124 @@
+/*======================== My Account Nav Tabs ========================*/
+.account{
+    &__nav{
+        display: block;
+        box-shadow: 0 0px 4px 0 #e9e9e9;
+
+        .item__link{
+            text-align: left;
+            padding: 12px 20px;
+            border-radius: 0;
+            border-bottom: 1px solid #efefef;
+
+            &.active{
+                background-color: $color-FF324D;
+                color: $color-white;
+
+                &:hover{
+                    color: $color-white;
+                }
+            }
+
+            &:hover{
+                color: $color-292b2c;
+            }
+        }
+    }
+
+    &__content{
+        &-card{
+            box-shadow: 0 0px 4px 0 #e9e9e9;
+
+            .card__header{
+                padding: .75rem 1.25rem;
+                border-bottom: 1px solid #f0f0f0;
+
+                h3{
+                    font-size: 26px;
+                    margin: 0;
+                    text-transform: capitalize;
+                    color: $color-292b2c;
+                }
+            }
+
+            .card__body{
+                padding: 1.25rem;
+                margin: 0;
+
+                a:not([href]){
+                    color: $color-292b2c;
+                    cursor: pointer;
+                    @include single-transition(all, 0.3s, ease-in-out, 0s);
+
+                    &:hover{
+                        color: $color-FF324D;
+                    }
+                }
+
+                table{
+                    color: $color-292b2c;
+
+                    .card__body-btn{
+                        @include button_hover_background();
+                        padding: 8px 25px;
+                        color: $color-white;
+                        border: 1px solid $color-FF324D;
+
+                        &::after{
+                            @include button_background();
+                            left: 0;
+                            background-color: $color-FF324D;
+                        }
+
+                        &::before{
+                            @include button_background();
+                            right: 0;
+                            background-color: $color-FF324D;
+                        }
+
+                        &:hover{
+                            color: $color-FF324D;
+
+                            &::after, &::before{
+                                width: 0;
+                            }
+                        }
+                    }
+                }
+
+                ul{
+                    margin-bottom: 1rem
+                }
+
+                &-btn{
+                    @include button_hover_background();
+                    padding: 12px 35px;
+                    border-radius: .25rem;
+                    color: $color-white;
+                    border: 1px solid $color-FF324D;
+
+                    &::after{
+                        @include button_background();
+                        left: 0;
+                        background-color: $color-FF324D;
+                    }
+
+                    &::before{
+                        @include button_background();
+                        right: 0;
+                        background-color: $color-FF324D;
+                    }
+
+                    &:hover{
+                        color: $color-FF324D;
+
+                        &::after, &::before{
+                            width: 0;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}

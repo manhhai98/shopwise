@@ -1,0 +1,242 @@
+/*======================== Nav Tab Section ========================*/
+.tabs{
+    @include max-breakpoint(480){
+        .nav-tabs{
+            display: block;
+            text-align: center;
+            font-size: 14px;
+        }
+    }
+
+    .nav-link{
+        border: none;
+        border-bottom: 2px solid transparent;
+        color: $color-292b2c;
+        @include single-transition(all, .3s, ease-in-out, 0s);
+
+        &:hover{
+            color: $color-FF324D;
+        }
+
+        &.active{
+            color: $color-FF324D;
+            background-color: transparent;
+            border-color: $color-FF324D;
+        }
+    }
+
+    .tab-content{
+        margin-top: 40px;
+
+        @include max-breakpoint(1199){
+            margin-top: 30px;
+        }
+
+        @include max-breakpoint(575){
+            margin-top: 20px;
+        }
+
+        @include max-breakpoint(480){
+            font-size: 14px;
+        }
+    
+        p{
+            margin-bottom: 25px;
+        }
+
+        table{
+            width: 100%;
+            margin-bottom: 1rem;
+            color: $color-292b2c;
+            border: 1px solid #dee2e6;
+
+            td{
+                padding: .75rem;
+                border: 1px solid #dee2e6;
+                text-transform: capitalize;
+
+                &:first-child{
+                    width: 25%;
+                }
+            }
+            
+        }
+    }
+
+    &__comment{
+        h5{
+            font-size: 1.25rem;
+            color: $color-292b2c;
+            text-transform: capitalize;
+
+            @include max-breakpoint(1199){
+                font-size: 18px;
+            }
+
+            @include max-breakpoint(480){
+                font-size: 16px;
+            }
+        }
+
+        &-list{
+            margin-bottom: 20px;
+            margin-top: 1.5rem;
+
+            .list__item{
+                display: flex;
+                border-bottom: 1px solid #ddd;
+                padding-bottom: 20px;
+                margin-bottom: 20px;
+
+                img{
+                    border-radius: 100%;
+                    max-width: 100px;
+
+                    @include max-breakpoint(480){
+                        max-width: 50%;
+                    }
+                }
+
+                &-content{
+                    padding-left: 20px;
+                    line-height: 25px;
+
+                    p{
+                        margin: 0;
+                    }
+
+                    .content__wrap{
+                        display: flex;
+                        justify-content: space-between;
+
+                        &-info{
+                            margin-bottom: 5px;
+
+                            .info__name{
+                                color: $color-292b2c;
+                                font-weight: 500;
+                                text-transform: capitalize;
+                            }
+
+                            .info__date{
+                                display: block;
+                                text-transform: capitalize;
+                                font-style: italic;
+                            }
+                        }
+
+                        .rate__content{
+                            position: relative;
+                            font-family: "Font Awesome 5 Free";
+                            height: 20px;
+                            width: 70px;
+                            display: inline-block;
+                            vertical-align: middle;
+                            font-size: 12px;
+
+                            &::before{
+                                content: "\f005\f005\f005\f005\f005";
+                                position: absolute;
+                                left: 0;
+                                color: $color-F6BC3E;
+                            }
+
+                            &-item{
+                                overflow: hidden;
+                                top: 0;
+                                left: 0;
+                                position: absolute;
+                                padding-top: 1.5em;
+                                color: $color-F6BC3E;
+
+                                &::before{
+                                    content: "\f005\f005\f005\f005\f005";
+                                    top: 0;
+                                    position: absolute;
+                                    left: 0;
+                                    font-weight: 900;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__review{
+        h5{
+            font-size: 1.25rem;
+            color: $color-292b2c;
+
+            @include max-breakpoint(1199){
+                font-size: 18px;
+            }
+
+            @include max-breakpoint(480){
+                font-size: 16px;
+            }
+        }
+
+        &-star{
+            margin-bottom: 1rem;
+
+            span{
+                cursor: pointer;
+                color: $color-F6BC3E;
+                font-size: 20px;
+
+                @include max-breakpoint(480){
+                    font-size: 16px;
+                }
+
+                i{
+                    &.active::before{
+                        font-weight: 900;
+                    }
+                }
+            }
+        }
+
+        
+
+        &-btn{
+            @include button_hover_background();
+            border: 1px solid $color-FF324D;
+            color: $color-white;
+            padding: 12px 35px;
+            font-size: 1rem;
+            border-radius: .25rem;
+            margin-bottom: 1rem;
+
+            @include max-breakpoint(575){
+                padding: 10px 28px;
+                font-size: 14px;
+            }
+
+            @include max-breakpoint(480){
+                padding: 8px 24px;
+            }
+
+            &::after{
+                @include button_background();
+                left: 0;
+                background-color: $color-FF324D;
+            }
+
+            &::before{
+                @include button_background();
+                right: 0;
+                background-color: $color-FF324D;
+            }
+
+            &:hover{
+                color: $color-FF324D;
+
+                &::after, &::before{
+                    width: 0;
+                }
+            }
+        }
+    }
+}   

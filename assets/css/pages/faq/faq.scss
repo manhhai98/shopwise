@@ -1,0 +1,68 @@
+/*======================== Frequently Asked Question ========================*/
+@include max-breakpoint(767){
+    .faq{
+        .margin-top{
+            margin-top: 1.5rem;
+        }
+    }
+    
+}
+
+.faq__title{
+    font-size: 26px;
+    font-weight: 700;
+    color: $color-292b2c;
+    margin-bottom: 45px;
+    text-transform: capitalize;
+
+    @include max-breakpoint(991){
+        margin-bottom: 25px;
+    }
+
+    @include max-breakpoint(767){
+        font-size: 24px;
+    }
+
+    @include max-breakpoint(575){
+        margin-bottom: 15px;
+    }
+
+    @include max-breakpoint(480){
+        font-size: 20px;
+        margin-bottom: 0;
+    }
+}
+
+.faq__list-item{
+    .item__faq:not([href]){
+        color: $color-292b2c;
+        font-weight: 600;
+        font-size: 14px;
+        display: flex;  
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 5px 15px 0;
+        border-bottom: 1px solid rgba(0,0,0,.125);
+        cursor: pointer;
+        @include single-transition(all, 0.3s, ease-in-out, 0s);
+
+        &:hover{
+            color: $color-FF324D;
+        }
+
+        i.hide{
+            display: none;
+        }
+    }
+
+    .item__answer{
+        padding-top: 15px;
+        display: none;
+
+        &.show{
+            display: block;
+        }
+    }
+
+   
+}

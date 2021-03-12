@@ -1,0 +1,94 @@
+/*======================== Client ========================*/
+.client2{
+    background-color: #FFF1F1;
+
+    &__slide{
+        padding: 0 60px;
+
+        @include max-breakpoint(575){
+            padding: 0;
+        }
+
+        .item__text{
+            text-align: center;
+            margin-bottom: 25px;
+
+            p{
+                margin-bottom: 0;
+
+                @include max-breakpoint(480){
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .item__info{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &-image{
+                margin-right: 15px;
+            }
+
+            &-name{
+                h6{
+                    margin-bottom: 5px;
+                    text-transform: capitalize;
+                    color: $color-292b2c;
+                }
+
+                span{
+                    text-transform: capitalize;
+                    color:$color-FF324D;
+                }
+            }
+        }
+
+        .owl-nav{
+            button.owl-prev{
+                position: absolute;
+                left: 0;
+                bottom: 10px;
+                height: 50px;
+                width: 50px;
+                z-index: 1;
+                background: transparent;
+                color: $color-333;
+                font-size: 24px;
+                outline: none;
+
+                @include max-breakpoint(480){
+                    font-size: 18px;
+                }
+    
+                &:hover{
+                    background: transparent;
+                    color: $color-333;
+                }
+            }
+    
+            button.owl-next{
+                position: absolute;
+                right: 0;
+                bottom: 10px;
+                height: 50px;
+                width: 50px;
+                z-index: 1;
+                background: transparent;
+                color: $color-333;
+                font-size: 24px;
+                outline: none;
+                
+                @include max-breakpoint(480){
+                    font-size: 18px;
+                }
+                
+                &:hover{
+                    background: transparent;
+                    color: $color-333;
+                }
+            }
+        }
+    }
+}

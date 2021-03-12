@@ -1,0 +1,61 @@
+/*========================11. Trending========================*/
+.trending{
+    padding-top: 50px;
+    padding-bottom: 20px;
+
+    @include max-breakpoint(1199){
+        padding-top: 40px;
+        padding-bottom: 10px;
+    }
+
+    @include max-breakpoint(767){
+        padding-top: 25px;
+        padding-bottom: 0;
+    }
+
+    @include max-breakpoint(575){
+        padding-top: 15px;
+    }
+
+    &__slide{
+        .owl-nav{
+            button.owl-prev{
+                position: absolute;
+                top: -90px;
+                left: 0;
+                color: $color-333;
+                font-size: 26px; 
+                outline: none;
+
+                &:hover{
+                    background: transparent;
+                    color: $color-333;
+                }
+
+                @include max-breakpoint(767){
+                    top: -70px;
+                }
+            }
+        
+            button.owl-next{
+                position: absolute;
+                top: -90px;
+                right: 0;
+                color: $color-333;
+                font-size: 26px;
+                outline: none;
+
+                &:hover{
+                    background: transparent;
+                    color: $color-333;
+                }
+
+                @include max-breakpoint(767){
+                    top: -70px;
+                }
+            }
+        }
+    }
+
+    
+}

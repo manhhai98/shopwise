@@ -1,0 +1,22 @@
+@mixin button_background() {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+    width: 51%;
+}
+
+@mixin  button_hover_background() {
+    display: inline-block;  
+    position: relative;   
+    vertical-align: middle;
+    background: transparent;
+    overflow: hidden;
+    text-align: center;
+    text-transform: capitalize;
+    transition: all 0.3s ease 0s;
+    z-index: 0;
+    cursor: pointer;
+}

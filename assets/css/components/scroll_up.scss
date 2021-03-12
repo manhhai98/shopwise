@@ -1,0 +1,26 @@
+/*========================15. Scroll Up========================*/
+.scroll{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9996;
+    display: none;
+
+    &__up{
+        display: flex;
+        height: 40px;
+        width: 40px;
+        font-size: 18px;
+        color: $color-white;
+        justify-content: center;
+        background-color: $color-292b2c;
+        align-items: center;
+        cursor: pointer;
+        transition: all .3s ease-in-out;
+
+        &:hover{
+            color: $color-white;
+            background-color: $color-FF324D;
+        }
+    }
+}

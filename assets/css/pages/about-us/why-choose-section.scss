@@ -1,0 +1,64 @@
+/*======================== Why Choose Us ========================*/
+.why{
+    padding-bottom: 70px;
+    background-color: #F4F9FC;
+
+    @include max-breakpoint(1199){
+        padding-bottom: 50px;
+    }
+
+    @include max-breakpoint(767){
+        padding-bottom: 20px;
+    }
+
+    @include max-breakpoint(575){
+        padding-bottom: 15px;
+    }
+
+    &__item{
+        background-color: $color-white;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        text-align: center;
+        margin-bottom: 30px;
+
+        &-icon{
+            margin-bottom: 15px;
+
+            i{
+                display: inline-block;
+                width: 60px;
+                height: 60px;
+                color: $color-white;
+                background-color: $color-FF324D;
+                font-size: 24px;
+                border-radius: 100%;
+                line-height: 60px;
+            }
+        }
+
+        &-text{
+            h5{
+                color: $color-292b2c;
+                text-transform: capitalize;
+                font-size: 1.25rem;
+
+                @include max-breakpoint(1199){
+                    font-size: 18px;
+                }
+
+                @include max-breakpoint(480){
+                    font-size: 16px;
+                }
+            }
+
+            p{
+                margin: 0;
+
+                @include max-breakpoint(480){
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,177 @@
+/*================1. Reset CSS================*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    color: #687188;
+    
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+
+        li{
+            list-style-type: none;
+        }
+    }
+    
+    a{
+        text-decoration:none;
+        color: $color-292b2c;
+
+        &:hover{
+            text-decoration: none;
+        }
+    }
+    
+    input,
+    select{
+        height: 50px;
+        display: block;
+        color: #687188;
+        width: 100%;
+        margin-bottom: 1rem;
+        padding: 8px 15px;
+        border: 1px solid #ced4da;
+        border-radius: .25rem;
+        outline: none;
+        @include single-transition(border-color, 0.15s, ease-in-out, 0s);
+
+        @include max-breakpoint(575){
+            height: 44px;
+        }
+
+        @include max-breakpoint(380){
+            font-size: 14px;
+            height: 40px;
+        }
+
+        &:focus{
+            border-color: #80bdff;
+            box-shadow: none;
+        }
+
+        &::placeholder{
+            text-transform: capitalize;
+        }
+    }
+
+    textarea{
+        height: 150px;
+        width: 100%;
+        color: #687188;
+        border: 1px solid #ced4da;
+        outline: none;
+        padding: 12px 15px;
+        border-radius: .25rem;
+        @include single-transition(border-color, 0.15s, ease-in-out, 0s);
+
+        @include max-breakpoint(380){
+            font-size: 14px;
+        }
+
+        &:focus{
+            border-color: #80bdff;
+            box-shadow: none;
+        }
+
+        &::placeholder{
+            text-transform: capitalize;
+        }
+    }
+    
+    img{
+        max-width: 100%;
+    }
+    
+    section{
+        padding: 100px 0;
+
+        @include max-breakpoint(1199){
+            padding: 80px 0;
+        }
+
+        @include max-breakpoint(767){
+            padding: 50px 0;
+        }
+
+        @include max-breakpoint(575){
+            padding: 30px 0;
+        }
+    }
+
+    h2{
+        font-weight: 700;
+        margin: 0;
+        text-transform: capitalize;
+        color: $color-292b2c;
+
+        @include max-breakpoint(1199){
+            font-size: 30px;
+            font-weight: 600;
+        }
+
+        @include max-breakpoint(767){
+            font-size: 26px;
+        }
+
+        @include max-breakpoint(575){
+            font-size: 20px;
+        }
+    }
+
+    h4{
+        font-weight: 700;
+        margin: 0;
+        text-transform: capitalize;
+        color: $color-292b2c;
+        margin-bottom: 25px;
+
+        @include max-breakpoint(1199){
+            font-size: 22px;
+        }
+
+        @include max-breakpoint(991){
+            margin-bottom: 20px;
+        }
+
+        @include max-breakpoint(767){
+            font-size: 20px;
+        }
+
+        @include max-breakpoint(575){
+            margin-bottom: 15px;
+        }
+
+        @include max-breakpoint(480){
+            font-size: 18px;
+        }
+    }
+
+    .modal{
+        z-index: 9999;
+
+        &-content{
+            border-radius: 0;
+
+            .modal-body{
+                padding: .5rem;
+            }
+        }
+    }
+
+    .zoomContainer{
+        z-index: 9999;
+    }
+}
+
+

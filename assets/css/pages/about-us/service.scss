@@ -1,0 +1,73 @@
+/*======================== Service2 ========================*/
+.service2{
+    padding-bottom: 70px;
+
+    @include max-breakpoint(1199){
+        padding-bottom: 50px;
+    }
+
+    @include max-breakpoint(767){
+        padding-bottom: 20px;
+    }
+
+    @include max-breakpoint(575){
+        padding-bottom: 15px;
+    }
+
+    &__info{
+        position: relative;
+        text-align: center;
+        padding: 0 40px;
+        margin-bottom: 30px;
+
+        @include max-breakpoint(1199){
+            padding: 0 20px;
+        }
+
+        @include max-breakpoint(575){
+            margin-bottom: 15px;
+        }
+
+        &::before{
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 15%;
+            bottom: 15%;
+            width: 1px;
+            background-color: #ddd;
+
+            @include max-breakpoint(991){
+                content: normal;
+            }
+        }
+
+        &-icon{
+            margin-bottom: 15px;
+
+            i{
+                &::before{
+                    font-size: 46px;
+                    line-height: 1;
+                }
+            }
+        }
+
+        &-content{
+            h6{
+                font-size: 18px;
+                color: $color-292b2c;
+                text-transform: capitalize;
+
+                @include max-breakpoint(480){
+                    font-size: 16px;
+                }
+            }
+
+            p{
+                font-size: 14px;
+                margin: 0;
+            }
+        }
+    }
+}

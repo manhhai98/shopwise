@@ -1,0 +1,47 @@
+/*========================2. Loader========================*/
+.loader{
+    background-color: #fff;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+
+    @include keyframes(ball-pulse-sync){
+        33% {
+            transform:translateY(10px)
+        }
+        66% {
+            transform:translateY(-10px)
+        }
+        100% {
+            transform:translateY(0)
+        }
+    }
+
+    &__item{
+        position: relative;
+        top: 50%;
+        text-align: center;
+
+        span{
+            display: inline-block;
+            background: $color-FF324D;
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+            @include animation('ball-pulse-sync .6s 0s infinite ease-in-out');
+
+            &:nth-child(1){
+                @include animation('ball-pulse-sync .6s -14s infinite ease-in-out');
+            }
+
+            &:nth-child(2){
+                @include animation('ball-pulse-sync .6s -70ms infinite ease-in-out');
+            }
+        }
+    }
+}

@@ -1,0 +1,210 @@
+/*========================10. Sale========================*/
+.sale{
+    padding-top: 50px;
+    padding-bottom: 20px;
+
+    @include max-breakpoint(1199){
+        padding-top: 40px;
+        padding-bottom: 10px;
+    }
+
+    @include max-breakpoint(767){
+        padding-top: 25px;
+        padding-bottom: 0;
+    }
+
+    @include max-breakpoint(575){
+        padding-top: 15px;
+    }
+
+    &__item{
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 30px;
+    
+        img{
+            transition: all 0.3s ease-in-out;
+            width: 100%;
+        }
+    
+        &:hover{
+            img{
+                transform: scale(1.06);
+            }
+        }
+    
+        &-info{
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            padding: 15px;
+            color: $color-292b2c;
+            text-transform: capitalize;
+    
+            @include max-breakpoint(991){
+                top: 5px;
+                left: 5px;
+            }
+    
+            @include max-breakpoint(767){
+                top: 15px;
+                left: 15px;
+            }
+    
+            @include max-breakpoint(380){
+                padding: 0;
+            }
+    
+            .info__title{
+                font-weight: 600;
+                font-size: 32px;
+    
+                @include max-breakpoint(1199){
+                    font-size: 26px;
+                }
+    
+                @include max-breakpoint(991){
+                    font-size: 22px;
+                }
+    
+                @include max-breakpoint(767){
+                    font-size: 24px;
+                }
+    
+                @include max-breakpoint(480){
+                    font-size: 20px;
+                }
+    
+                @include max-breakpoint(375){
+                    font-size: 18px;
+                }
+            }
+    
+            .info__title1{
+                font-size: 1.25rem;
+    
+                @include max-breakpoint(991){
+                    font-size: 18px;
+                }
+    
+                @include max-breakpoint(480){
+                    font-size: 16px;
+                }
+    
+                @include max-breakpoint(375){
+                    font-size: 14px;
+                }
+            }
+    
+            .info__btn{
+                position: relative;
+                cursor: pointer;
+                color: $color-292b2c;
+                transition: all 0.3s ease-in-out;
+    
+                @include max-breakpoint(375){
+                    font-size: 14px;
+                }
+    
+                &::before{
+                    content: "";
+                    position: absolute;
+                    bottom: 3px;
+                    height: 7px;
+                    background-color: rgba(255,50,77,0.2);
+                    width: 100%;
+                }
+    
+                &:hover{
+                    color: $color-FF324D;
+                }
+            }
+        }
+    
+        &-info1{
+            @include center_vertical();
+            padding: 15px;
+            left: 35px;
+            color: $color-292b2c;
+            text-transform: capitalize;
+    
+            @include max-breakpoint(991){
+                left: 15px;
+            }
+    
+            @include max-breakpoint(767){
+                left: 35px;
+            }
+    
+            @include max-breakpoint(380){
+                left: 0;
+                width: 50%;
+            }
+    
+            .info__title{
+                font-weight: 600;
+                font-size: 32px;
+    
+                @include max-breakpoint(1199){
+                    font-size: 26px;
+                }
+    
+                @include max-breakpoint(991){
+                    font-size: 22px;
+                }
+    
+                @include max-breakpoint(767){
+                    font-size: 24px;
+                }
+    
+                @include max-breakpoint(480){
+                    font-size: 20px;
+                }
+    
+                @include max-breakpoint(375){
+                    font-size: 18px;
+                }
+            }
+    
+            .info__title1{
+                font-size: 1.25rem;
+    
+                @include max-breakpoint(991){
+                    font-size: 18px;
+                }
+    
+                @include max-breakpoint(480){
+                    font-size: 16px;
+                }
+    
+                @include max-breakpoint(375){
+                    font-size: 14px;
+                }
+            }
+    
+            .info__btn{
+                position: relative;
+                cursor: pointer;
+                color: $color-292b2c;
+                transition: all 0.3s ease-in-out;
+    
+                @include max-breakpoint(375){
+                    font-size: 14px;
+                }
+    
+                &::before{
+                    content: "";
+                    position: absolute;
+                    bottom: 3px;
+                    height: 7px;
+                    background-color: rgba(255,50,77,0.2);
+                    width: 100%;
+                }
+    
+                &:hover{
+                    color: $color-FF324D;
+                }
+            }
+        }
+    }
+}   

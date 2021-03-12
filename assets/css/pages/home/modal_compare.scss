@@ -1,0 +1,153 @@
+/*========================4. Compare Modal========================*/
+.compareModal {
+    padding: 0 8px;
+
+    @include max-breakpoint(1199) {
+        table {
+            width: 1050px;
+        }
+    }
+
+    @include max-breakpoint(767) {
+        table {
+            width: 900px;
+        }
+    }
+
+    .table-responsive {
+        padding: 20px;
+
+        table {
+            tr {
+                td {
+                    vertical-align: middle;
+                    width: 10%;
+                    padding: 0.75rem;
+                    color: $color-292b2c;
+
+                    &.product__item-title {
+                        width: 100px;
+                        text-transform: uppercase;
+                        font-weight: 600;
+                    }
+
+                    &.product__item-name {
+                        color: $color-292b2c;
+                        font-weight: 600;
+                        text-transform: capitalize;
+                        cursor: pointer;
+                        transition: all 0.3s ease-in-out;
+
+                        &:hover {
+                            color: $color-FF324D;
+                        }
+                    }
+
+                    &.product__item-price {
+                        color: $color-FF324D;
+                        font-weight: 600;
+                    }
+
+                    &.product__item-btn {
+                        a {
+                            @include button_hover_background();
+                            border: 1px solid $color-FF324D;
+                            color: $color-white;
+                            padding: 12px 35px;
+                            text-transform: capitalize;
+                            border-radius: 0.25rem;
+
+                            &::after {
+                                @include button_background();
+                                left: 0;
+                                background-color: $color-FF324D;
+                            }
+
+                            &::before {
+                                @include button_background();
+                                right: 0;
+                                background-color: $color-FF324D;
+                            }
+
+                            &:hover {
+                                color: $color-FF324D;
+
+                                &::after,
+                                &::before {
+                                    width: 0;
+                                }
+                            }
+                        }
+                    }
+
+                    p {
+                        margin-bottom: 0;
+                        color: #687188;
+                        line-height: 28px;
+                    }
+
+                    &.product__item-remove {
+                        a {
+                            cursor: pointer;
+                        }
+                    }
+
+                    &.product__item-color {
+                        span {
+                            height: 15px;
+                            width: 15px;
+                            display: inline-block;
+                            vertical-align: middle;
+                            margin: 5px;
+                            position: relative;
+                            cursor: pointer;
+                            border-radius: 100%;
+                            cursor: auto;
+                        }
+                    }
+
+                    &.product__item-rate {
+                        .rate__content {
+                            position: relative;
+                            font-family: "Font Awesome 5 Free";
+                            height: 20px;
+                            width: 70px;
+                            display: inline-block;
+                            vertical-align: middle;
+                            font-size: 12px;
+
+                            &::before {
+                                content: "\f005\f005\f005\f005\f005";
+                                position: absolute;
+                                left: 0;
+                                color: $color-F6BC3E;
+                            }
+
+                            &-item {
+                                overflow: hidden;
+                                top: 0;
+                                left: 0;
+                                position: absolute;
+                                padding-top: 1.5em;
+                                color: $color-F6BC3E;
+
+                                &::before {
+                                    content: "\f005\f005\f005\f005\f005";
+                                    top: 0;
+                                    position: absolute;
+                                    left: 0;
+                                    font-weight: 900;
+                                }
+                            }
+                        }
+
+                        span {
+                            font-size: 14px;
+                            margin-left: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

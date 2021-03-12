@@ -1,0 +1,107 @@
+/*========================12. Instagram========================*/
+.instagram{
+    padding-top: 50px;
+    padding-bottom: 20px;
+
+    @include max-breakpoint(1199){
+        padding-top: 40px;
+        padding-bottom: 10px;
+    }
+
+    @include max-breakpoint(767){
+        padding-top: 25px;
+        padding-bottom: 0;
+    }
+
+    @include max-breakpoint(575){
+        padding-top: 15px;
+    }
+
+
+    .container__fluid{
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    &__follow{
+        @include center-vertical();
+        z-index: 997;
+        text-align: center;
+        right: 0;
+        left: 0;
+        max-width: 400px;
+        background-color: rgba(255,255,255,01);
+        margin: 0 auto;
+        padding: 25px;
+        border-radius: 80px;
+
+        @include max-breakpoint(991){
+            max-width: 350px;
+            padding: 20px;
+        }
+
+        @include max-breakpoint(575){
+            padding: 15px;
+        }
+
+        @include max-breakpoint(480){
+            max-width: 250px;
+        }
+
+        i{
+            @include center-vertical();
+            font-size: 80px;
+            left: 0;
+            right: 0;
+            z-index: -1;
+            opacity: 0.1;
+        }
+
+        h3{
+            font-size: 1.75rem;
+            margin-bottom: .5rem;
+            color: $color-292b2c;
+
+            @include max-breakpoint(1199){
+                font-size: 22px;
+            }
+
+            @include max-breakpoint(767){
+                font-size: 24px;
+            }
+
+            @include max-breakpoint(480){
+                font-size: 20px;
+            }
+        }
+
+    }
+
+    &__slide-item{
+        cursor: pointer;
+        overflow: hidden;
+
+        a{
+            position: relative;
+            display: block;
+
+            &::before{
+                @include layout();
+            }
+
+            &:hover{
+                &::before{
+                    opacity: 1;
+                }
+
+                img{
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        img{
+            transition: all 0.5s ease-in-out;
+        }
+    }
+}

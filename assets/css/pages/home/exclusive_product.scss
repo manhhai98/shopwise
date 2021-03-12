@@ -1,0 +1,28 @@
+/*========================9. Exclusive Product========================*/
+.exclusive{
+    padding-top: 50px;
+    padding-bottom: 20px;
+
+    @include max-breakpoint(1199){
+        padding-top: 40px;
+        padding-bottom: 10px;
+    }
+
+    @include max-breakpoint(767){
+        padding-top: 25px;
+        padding-bottom: 0;
+    }
+
+    @include max-breakpoint(575){
+        padding-top: 15px;
+    }
+
+    @include max-breakpoint(480){
+        .col-6{
+            max-width: 100%;
+            flex: 0 0 100%;
+        }
+    }
+
+}
+

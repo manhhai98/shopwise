@@ -1,0 +1,21 @@
+/*
+Author: Manh Hai
+Theme: Shopwise
+Description: index Style CSS
+Version: 1.0.0
+
+========================Table of Content========================*/
+/*1. Reset CSS*/
+
+@import "./common/common.scss";
+@import "./settings/index.scss";
+@import "./layouts/index.scss";
+@import "./pages/home/index.scss";
+@import "./pages/about-us/index.scss";
+@import "./pages/contact/index.scss";
+@import "./pages/product-detail/index.scss";
+@import "./pages/faq/index.scss";
+@import "./pages/shop-cart/index.scss";
+@import "./pages/checkout/index.scss";
+@import "./pages/my-account/index.scss";
+@import "./components/index.scss";

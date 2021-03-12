@@ -1,0 +1,21 @@
+.about-title{
+    text-align: center;
+
+    h2{
+        margin-bottom: 25px;
+    }
+
+    p{
+        margin-bottom: 30px;
+        line-height: 28px;
+
+        @include max-breakpoint(575){
+            margin-bottom: 20px;
+        }
+
+        @include max-breakpoint(480){
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+    }
+}

@@ -1,0 +1,825 @@
+//================6. Header================
+.header{
+    z-index: 999;
+    width: 100%;
+    background-color: $color-white;
+
+    @include keyframes(fadeInUp){
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    &.fixed{
+        position: fixed;
+        @include animation('slideInDown 0.65s cubic-bezier(0.23, 1, 0.32, 1)');
+        box-shadow: 0 0 5px rgba(0,0,0,0.15);
+
+        .header__wrap-top{
+            display: none;
+        }
+    }
+
+    &__wrap-top{
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+        transition: all 0.5s ease-in-out;
+
+        .top__items{
+            display: flex;
+            align-items: center;
+            @include breakpoint(767){
+                justify-content: center;
+            }
+
+            &-item{
+                margin-right: .5rem;
+                cursor: pointer;
+
+                &:last-child{
+                    cursor: auto;
+                }
+
+                .item__text{
+                    padding: 5px 7px 5px 7px;
+                    display: inline-block;
+                    font-size: 14px;
+                    color: $color-333;
+                    @include breakpoint(351){
+                        padding: 1.6px;
+                    }
+                }
+
+                img{
+                    border-radius: 100%;
+                    height: 16px;
+                    width: 16px;
+                    margin-right: 6px;
+                }
+
+                .item__arrow{
+                    font-size: 10px;
+                }
+
+                .item__dropdown{
+                    position: absolute;
+                    background-color: $color-white;
+                    transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+                    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+                    border: 1px solid #dee2e6;
+                    transform: scale(0,0);
+                    z-index: 9997;
+
+                    &.show{
+                        transform: scale(1,1);
+                        transform-origin: top;
+                    }
+
+                    &-item{
+                        padding: 5px 10px 5px 10px;
+                        font-size: 14px;
+                        color: $color-333;
+                    }
+                }
+
+                .item__phone{
+                    padding-left: 10px;
+                }
+            }
+        }
+
+        .top__list{
+            text-align: right;
+            @include breakpoint(767){
+                text-align: center;
+            }
+
+            &-item{
+                display: inline-block;
+                color: $color-333;
+                font-size: 14px;
+                padding: 2px 15px 2px 0;
+                text-transform: capitalize;
+
+                .item__link{
+                    cursor: pointer;
+                    transition: all .3s ease-in-out;
+
+                    &:hover{
+                        color: $color-FF324D;
+                    }
+                }
+            }
+        }
+    }
+
+    &__wrap-bottom{
+
+        &.sticky{
+            position: fixed;
+            display: flex;
+            animation: fadeInDown .4s ease-in-out;
+            z-index: 1040;
+        }
+
+        .bottom__navbar{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+
+            &-logo{
+                padding: 10px 0;
+                @include breakpoint(375){
+                    img{
+                        max-width: 140px;
+                    }
+                }
+            }
+
+            &-list{
+                display: flex;
+                align-items: center;
+                @include breakpoint(991) { display: none; }
+
+                .list__item{
+                    &:hover{
+                        .list__item-dropdown{
+                            display: block;
+                        }
+                    }
+
+                    &-link{
+                        font-weight: 500;
+                        padding: 22px 10px;
+                        text-transform: uppercase;
+                        transition: all 0.3s ease 0s;
+                        font-size: 14px;
+                        color: $color-333;
+                        cursor: pointer;
+    
+                        i{
+                            font-size: 10px;
+                        }
+                        
+                        &.active, &:hover{
+                            color: $color-FF324D;
+                        }
+                    }
+    
+                    &-dropdown{
+                        position: absolute;
+                        min-width: 14rem;
+                        margin-top: 20px;
+                        top: 100%;
+                        left: 0;
+                        z-index: 9996;
+                        background-color: $color-white;
+                        box-shadow: 0 13px 42px 11px rgba(0,0,0,.05);
+                        display: none;
+                        animation: fadeInUp .5s;
+                        
+                        .dropdown__item{
+                            &-link{
+                                display: block;
+                                padding: 8px 20px 8px 20px;
+                                color: $color-333;
+                                font-size: 14px;
+                                text-transform: capitalize;
+                                cursor: pointer;
+                                transition: all .3s ease-in-out;
+                                align-items: center;
+        
+                                &.active, &:hover{
+                                    color: $color-FF324D;
+                                }
+        
+                                i{
+                                    position: absolute;
+                                    right: 15px;
+                                    margin-top: 5px;
+                                    vertical-align: middle;
+                                    font-size: 10px;
+                                    transition: all .3s ease-in-out;
+                                }
+                            }
+        
+                            &-list{
+                                position: absolute;
+                                background-color: $color-white;
+                                box-shadow: 0 13px 42px 11px rgba(0,0,0,.05);
+                                right: 100%;
+                                top:0;
+                                min-width: 14rem;
+                                display: none;
+                                animation: fadeInUp .5s;
+        
+                                .list__item-link{
+                                    padding: 8px 20px 8px 20px;
+                                    color: $color-333;
+                                    font-size: 14px;
+                                    text-transform: capitalize;
+                                    display: block;
+                                    font-weight: normal;
+                                    transition: all .3s ease-in-out;
+        
+                                    &:hover{
+                                        color: $color-FF324D;
+                                    }
+                                }
+                            }
+        
+                            &:hover{
+                                .dropdown__item-list{
+                                    display: block;
+                                }
+
+                                i{
+                                    transform: rotate(180deg);
+                                }
+                            }
+                        }
+
+                        .dropdown__items{
+                            display: flex;
+                            padding: 15px 0;
+
+                            &-list{
+                                border-right: 1px solid #ddd;
+                                flex: 0 0 25%;
+
+                                &:last-child{
+                                    border-right: none;
+                                }
+
+                                .list__header{
+                                    color: $color-333;
+                                    padding: 10px 20px;
+                                    text-transform: uppercase;
+                                    font-weight: 600;
+                                }
+
+                                .list__item{
+                                    &:hover{
+                                        .list__item-dropdown{
+                                            display: block;
+                                        }
+                                    }
+
+                                    &-link{
+                                        padding: 8px 55px 8px 20px;
+                                        color: $color-333;
+                                        font-size: 14px;
+                                        text-transform: capitalize;
+                                        display: block;
+                                        transition: all .3s ease-in-out;
+                                        cursor: pointer;
+                                        font-weight: normal;
+
+                                        &:hover, &.active{
+                                            color: $color-FF324D;
+                                        }
+                                    }
+
+                                    .banner__info{
+                                        @include center-vertical();
+                                        right: 0;
+                                        padding: 10%;
+                                        color: $color-292b2c;
+
+                                        a{
+                                            position: relative;
+                                            padding-bottom: 3px;
+                                            cursor: pointer;
+
+                                            &:hover{
+                                                color: $color-FF324D;
+
+                                                &::before{
+                                                    width: 100%;
+                                                }
+                                            }
+
+                                            &::before{
+                                                content: "";
+                                                position: absolute;
+                                                left: 0;
+                                                right: 0;
+                                                bottom: 0;
+                                                height: 1px;
+                                                width: 50%;
+                                                background-color: $color-292b2c;
+                                                transition: all 0.5s ease-in-out;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .list__sale{
+                                    padding: 15px;
+
+                                    &-banner::before{
+                                        content: "";
+                                        position: absolute;
+                                        bottom: 0;
+                                        right: 0;
+                                        top: 0;
+                                        left: 0;
+                                        background-color: #000;
+                                        opacity: 0.4;
+                                    }
+
+                                    .banner__info{
+                                        position: absolute;
+                                        bottom: 0;
+                                        left: 0;
+                                        right: 0;
+                                        padding: 30px 25px;
+                                        color: $color-white;
+
+                                        h5{
+                                            font-size: 16px
+                                        }
+
+                                        h3{
+                                            font-size: 32px;
+                                            font-weight: bold;
+                                        }
+
+                                        a{
+                                            @include button_hover_background();
+                                            border: 1px solid $color-white;
+                                            color: $color-292b2c;
+                                            padding: 8px 25px;
+                                            font-size: 14px;
+
+                                            &:hover{
+                                                color: $color-white;
+
+                                                &::after, &::before{
+                                                    width: 0;
+                                                }
+                                            }
+
+                                            &::before{
+                                                @include button_background();
+                                                background-color: $color-white;
+                                                right: 0;
+                                            }
+
+                                            &::after{
+                                                @include button_background();
+                                                background-color: $color-white;
+                                                left: 0;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .dropdown__sale-banner{
+                            margin-bottom: 15px;
+
+                            .banner__info{
+                                @include center-vertical();
+                                right: 0;
+                                padding: 20px;
+                                color: $color-292b2c;
+
+                                h6{
+                                    font-size: 14px;
+                                }
+
+                                h4{
+                                    font-size: 20px;
+                                }
+
+                                a{
+                                    position: relative;
+                                    padding-bottom: 3px;
+                                    transition: all .3s ease-in-out;
+                                    cursor: pointer;
+
+                                    &::before{
+                                        content: "";
+                                        position: absolute;
+                                        left: 0;
+                                        right: 0;
+                                        bottom: 0;
+                                        height: 3px;
+                                        width: 50%;
+                                        opacity: 0.4;
+                                        background-color: $color-292b2c;
+                                        transition: all 0.5s ease-in-out;
+                                    }
+
+                                    &:hover{
+                                        color: $color-FF324D;
+
+                                        &::before{
+                                            width: 100%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .icon__item{
+                &:hover{
+                    .icon__item-dropdown{
+                        display: block;
+                    }
+                }
+
+                &-link{
+                    padding: 20px 10px;
+                    color: $color-333;
+                    cursor: pointer;
+                    transition: all .3s ease-in-out;
+    
+                    &:hover{
+                        color: $color-FF324D;
+                    }
+    
+                    i{
+                        font-size: 20px;
+                        vertical-align: middle;
+                    }
+    
+                    .link__count{
+                        position: relative;
+                        top: -3px;
+                        margin-left: -10px;
+                        margin-right: -5px;
+                        padding: 0 5px;
+                        display: inline-block;
+                        color: $color-white;
+                        min-width: 16px;
+                        text-align: center;
+                        vertical-align: top;
+                        font-size: 11px;
+                        background-color: $color-FF324D;
+                        border-radius: 50px;   
+                    }
+                }
+    
+                &-dropdown{
+                    background-color: $color-white;
+                    box-shadow: 0 13px 42px 11px rgba(0,0,0,.05);
+                    width: 320px;
+                    position: absolute ;
+                    display: none;
+                    transition: all 0.25s ease-in-out;
+                    transform-origin: calc(100% - 30px) 0;
+                    display: none;
+                    margin-top: 20px;
+                    right: 0;
+                    z-index: 9996;
+                    animation: fadeInUp .5s;
+
+                    @include breakpoint(991){
+                        display: block;
+                        transform: scale(0,0);
+                        animation-name: none;
+                        &.show{
+                            transform: scale(1,1);  
+                        }
+                    }
+
+                    @include breakpoint(380){
+                        width: 310px;
+                        right: -35px;
+                    }
+
+                    .dropdown__list-item{
+                        display: flex;
+                        border-bottom: 1px solid #ddd;
+                        transition: all 0.3s ease 0s;
+                        padding: 15px;
+
+                        &:hover{
+                            .item__info{
+                                span:first-child{
+                                    color: $color-FF324D;
+                                }
+                            }
+                        }
+
+                        .item__image{
+                            margin-right: 10px;
+                            cursor: pointer;
+                        }
+
+                        .item__info{
+                            font-size: 14px;
+                            vertical-align: top;
+                            text-transform: capitalize;
+                            font-weight: 600;
+                            color: $color-333;
+                            
+                            
+                            span:first-child{
+                                cursor: pointer;
+                                transition: all 0.3s ease-in-out;
+                            }
+                        }
+
+                        .item__close{
+                            cursor: pointer;
+                        }
+                    }
+
+                    .dropdown__footer-total{
+                        padding: 10px 15px;
+                        display: flex;
+                        justify-content: space-between;
+                        text-transform: capitalize;
+                        font-weight: 600;
+                        color: $color-333;
+
+                    }
+
+                    .dropdown__footer-btn{
+                        padding: 10px 15px 20px;
+                        text-align: center;
+
+                        .btn__view{
+                            @include button_hover_background();
+                            border: 1px solid $color-333;
+                            color: $color-white;
+                            text-transform: capitalize;
+                            padding: 8px 20px;
+                            border-radius: 40px;  
+
+                            &::after{
+                                @include button_background();
+                                left: 0;
+                                background-color: $color-333;
+                            }
+
+                            &::before{
+                                @include button_background();
+                                right: 0;
+                                background-color: $color-333;
+                            }
+
+                            &:hover{
+                                color: $color-333;
+
+                                &::after, &::before{
+                                    width: 0;
+                                }
+                            }
+                        }
+
+                        .btn__checkout{
+                            @include button_hover_background();
+                            padding: 8px 20px;
+                            border: 1px solid $color-FF324D;
+                            border-radius: 40px;
+                            text-transform: capitalize;
+                            color: $color-white;
+                            margin-left: 10px;
+
+                            &::after{
+                                @include button_background();
+                                left: 0;
+                                background-color: $color-FF324D;
+                            }
+
+                            &::before{
+                                @include button_background();
+                                right: 0;
+                                background-color: $color-FF324D;
+                            }
+
+                            &:hover{
+                                color: $color-FF324D;
+
+                                &::after, &::before{
+                                    width: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &-btn{
+                    font-size: 20px;
+                    margin-left: 5px;
+                    color: $color-333;
+                    cursor: pointer;
+                    display: none;
+                    @include breakpoint(991) { display: block; }
+                }
+
+                &-menu{
+                    background-color: $color-white;
+                    box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
+                    overflow-y: auto;
+                    position: absolute;
+                    left: 0;
+                    right:0;
+                    top: 100%;
+                    display: none;
+                    z-index: 9996;
+
+
+                    .menu__item-link{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 10px 10px;
+                        text-transform: uppercase;
+                        font-size: 14px;
+                        color: $color-333;
+                        font-weight: 600;
+                        cursor: pointer;
+                        transition: all 0.3s ease-in-out;
+
+                        &.active, &:hover{
+                            color: $color-FF324D;
+                        }
+                    }
+
+                    i{
+                        font-size: 10px;
+                    }
+
+                    .menu__item-dropdown{
+                        padding-left: 10px;
+                        background-color: $color-white;
+                        box-shadow: 0 13px 42px 11px rgba(0,0,0,.05);
+                        display: none;
+
+                        &.show{
+                            display: block;
+                        }
+
+                        .dropdown__item-link{
+                            padding: 8px 10px 8px 10px;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            color: $color-333;
+                            font-size: 14px;
+                            font-size: 400;
+                            text-transform: capitalize;
+                            cursor: pointer;
+                            transition: all 0.3s ease-in-out;
+
+                            &:hover{
+                                color: $color-FF324D;
+                            }
+                        }
+
+                        .item__link{
+                            padding: 8px 10px 8px 10px;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            color: $color-333;
+                            font-size: 14px;
+                            font-size: 400;
+                            text-transform: capitalize;
+                            cursor: pointer;
+                            transition: all 0.3s ease-in-out;
+
+                            &:hover{
+                                color: $color-FF324D;
+                            }
+                        }
+
+                        .dropdown__list-header{
+                            padding: 10px;
+                            color: $color-333;
+                            text-transform: uppercase;
+                            font-weight: bold;
+                        }
+
+                        .dropdown__item-list{
+                            background-color: $color-white;
+                            box-shadow: 0 13px 42px 11px rgba(0,0,0,.05);
+                            display: none;
+
+                            &.show{
+                                display: block;
+                            }
+
+                            .list__item-link{
+                                padding: 8px 10px 8px 10px;
+                                display: block;
+                                color: $color-333;
+                                font-size: 14px;
+                                font-size: 400;
+                                text-transform: capitalize;
+                                cursor: pointer;
+                                transition: all 0.3s ease-in-out;
+
+                                &:hover{
+                                    color: $color-FF324D;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &-layout{
+                    content: "";
+                    background-color: #000;
+                    height: 100%;
+                    width: 0;
+                    top: 0;
+                    right: 0;
+                    position: fixed;
+                    text-align: center;
+                    opacity: 0.5;
+                    transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+                    z-index: 9997;
+
+                    &.open{
+                        left: 0;
+                        right: auto;
+                        width: 100%;
+                    }
+                }
+
+                &-search{
+                    position: fixed;
+                    left: 0;
+                    right: 0;
+                    max-width: 800px;
+                    margin: 0 auto;
+                    padding: 80px 0;
+                    z-index: 9998;
+                    bottom: 0;
+                    height: 100%;
+                    align-items: center;
+                    display: none;
+                    @include breakpoint(991) { 
+                        max-width: 100%;
+                        margin: 0 30px; }
+
+                    &.open{
+                        display: flex;
+                        animation: slideInLeft 1s both;
+                    }
+
+                    .search__close{
+                        position: absolute;
+                        top: 25%;
+                        right: 0;
+                        color: $color-white;
+                        font-size: 20px;
+                        cursor: pointer;
+                    }
+
+                    .search__form{
+                        width: 100%;
+                        position: relative;
+
+                        input{
+                            width: 100%;
+                            background: transparent;
+                            border-left: none;
+                            border-right: none;
+                            border-top: none;
+                            border-bottom: 2px solid $color-white;
+                            color: $color-white;
+                            padding: 10px 0;
+                            font-size: 1.2rem;
+                            font-weight: 400;
+
+                            &::placeholder{
+                                color: $color-white;
+                                font-size: 1.2rem;
+                                font-weight: 400;
+                            }
+                        }
+
+                        &-btn{
+                            position: absolute;
+                            top: 5px;
+                            right: 5px;
+                            color: $color-white;
+                            font-size: 24px;
+                        }
+                    }
+                }
+            }
+
+            
+        }
+    }
+}
+    
+

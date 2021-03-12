@@ -1,0 +1,275 @@
+/*========================14. Footer========================*/
+.footer{
+    background-color: $color-292b2c;
+    color: $color-white;
+
+    &__top{
+        padding: 100px 0 70px;
+
+        @include max-breakpoint(1199){
+            padding: 80px 0 50px;
+        }
+
+        @include max-breakpoint(767){
+            padding: 50px 0 20px;
+        }
+
+        @include max-breakpoint(575){
+            padding: 20px 0 15px;
+        }
+
+        &-logo{
+            margin-bottom: 20px;
+        }
+
+        h6{
+            text-transform: capitalize;
+            margin-top: 10px;
+            margin-bottom: 25px;
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+
+            @include max-breakpoint(767){
+                margin-top: 0;
+            }
+
+            @include max-breakpoint(575){
+                margin-bottom: 20px;
+            }
+
+            @include max-breakpoint(425){
+                font-size: 16px;
+            }
+        }
+
+        p{
+            font-size: 14px;
+            line-height: 28px;
+            margin-bottom: 25px;
+        }
+
+        &-contact{
+            margin-bottom: 30px;
+
+            @include max-breakpoint(575){
+                margin-bottom: 20px;
+            }
+
+            .contact__info-item{
+                margin-bottom: 15px;
+
+                i{
+                    display: inline-block;
+                    margin-right: 10px;
+                    margin-top: 4px;
+                    font-size: 18px;
+                    vertical-align: top;
+                }
+
+                p{
+                    display: inline-block;
+                    font-size: 14px;
+                    margin: 0;
+                    max-width: 78%;
+
+                    @include max-breakpoint(425){
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+
+        .social__item{
+            display: inline-block;
+            padding: 0px 5px 5px 0;
+
+            a{
+                display: inline-block;
+                height: 36px;
+                width: 36px;
+                font-size: 18px;
+                text-align: center;
+                border-radius: 50px;
+                cursor: pointer;
+
+                &:hover{
+                    color: $color-white;
+                }
+            }
+
+            &-facebook{
+                background-color: #3b5998;
+            }
+
+            &-twitter{
+                background-color: #00acee;
+            }
+
+            &-google{
+                background-color: #dd4b39 ;
+            }
+
+            &-youtube{
+                background-color: #c4302b;
+            }
+
+            &-instagram{
+                background-color: #3f729b;
+            }
+
+            i{
+                line-height: 36px;
+                font-size: 16px;
+            }
+
+            &-white{
+                font-size: 18px;
+                color: $color-white;
+                height: 36px;
+                width: 36px;
+                line-height: 36px;
+                display: inline-block;
+                text-align: center;
+                background-color: transparent;
+                transition: all .3s ease-in-out;
+
+                &:hover{
+                    color: $color-FF324D;
+                }
+            }
+        }
+
+        li{
+            padding-bottom: 10px;
+
+            a{
+                color: $color-white;
+                font-size: 14px;
+                transition: all .3s ease-in-out;
+                cursor: pointer;
+
+                &:hover{
+                    color: $color-FF324D;
+                }
+
+                @include max-breakpoint(425){
+                    font-size: 12px;
+                }
+            }
+        }
+
+        &-subcribe{
+            margin-bottom: 30px;
+
+            @include max-breakpoint(991){
+                margin-top: 20px;
+            }
+
+            @include max-breakpoint(575){
+                margin-bottom: 20px;
+                margin-top: 0;
+            }
+
+            p{
+                font-size: 14px;
+                line-height: 28px;
+                margin-bottom: 25px;
+
+                @include max-breakpoint(425){
+                    font-size: 12px;
+                }
+            }
+
+            form{
+                position: relative;
+
+                input{
+                    display: block;
+                    width: 100%;
+                    border-radius: 30px;
+                    padding: 10px 20px;
+                    height: 50px;
+                    font-size: 1rem;
+                    font-weight: 400;
+                    
+                    background-color: $color-white;
+                    border: 1px solid #ced4da;
+                    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+                    &::placeholder{
+                        text-transform: capitalize;
+                    }
+                }
+
+                button{
+                    @include center-vertical();
+                    outline: none;
+                    background-color: $color-FF324D;
+                    color: $color-white;
+                    font-size: 20px;
+                    right: 5px;
+                    border: 0;
+                    border-radius: 100%;
+                    width: 40px;
+                    height: 40px;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        &-links{
+            margin-bottom: 30px;
+
+            @include max-breakpoint(575){
+                margin-bottom: 20px;
+            }
+        }
+
+        &-account{
+            margin-bottom: 30px;
+
+            @include max-breakpoint(767){
+                margin-top: 20px;
+            }
+
+            @include max-breakpoint(575){
+                margin-bottom: 20px;
+                margin-top: 0;
+            }
+        }
+    }
+
+    &__bottom{
+        padding: 30px 0;
+        border-top: 1px solid rgba(255,255,255,0.1);
+
+        @include max-breakpoint(767){
+            padding: 15px 0;
+        }
+
+        p{
+            font-size: 14px;
+            line-height: 28px;
+            margin-bottom: 0;
+
+            @include max-breakpoint(767){
+                text-align: center;
+                margin-bottom: 25px;
+            }
+        }
+
+        &-payment{
+            text-align: right;
+
+            @include max-breakpoint(767){
+                text-align: center;
+            }
+
+            .payment__item{
+                display: inline-block;
+                cursor: pointer;
+            }
+        }
+    }
+}

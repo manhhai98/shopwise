@@ -1,0 +1,271 @@
+/*========================7. Banner========================*/
+.banner{
+    &__item{
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+        height: 650px;
+
+        @include max-breakpoint(991){
+            height: 450px;
+        }
+
+        @include max-breakpoint(575){
+            height: 350px;
+        }
+    
+        &.sofa{
+            background-image: url(../images/banner8.jpg);
+        }
+    
+        &.chair{
+            background-image: url(../images/banner7.jpg);
+        }
+    
+        &.living-room{
+            background-image: url(../images/banner9.jpg);
+        }
+    
+        &-content{
+            margin-top: 50%;
+            position: absolute;
+            transform: translateY(-50%);
+
+            @include max-breakpoint(575){
+                margin-top: 40%;
+            }
+
+            @include max-breakpoint(380){
+                margin-top: 70%;
+            }
+    
+            h6{
+                font-size: 1rem;
+                color: $color-292b2c;
+                text-transform: uppercase;
+                font-weight: 500;
+            }
+    
+            h2{
+                margin-bottom: 20px;
+                font-size: 70px;
+                font-weight: 600;
+                color: $color-292b2c;
+                text-transform: capitalize;
+
+                @include max-breakpoint(991){
+                    font-size: 50px;
+                }
+
+                @include max-breakpoint(575){
+                    font-size: 30px;
+                    margin-bottom: 15px;
+                }
+            }
+    
+            p{
+                margin-bottom: 30px;
+
+                @include max-breakpoint(575){
+                    margin-bottom: 15px;
+                }
+
+                @include max-breakpoint(380){
+                    font-size: 12px;
+                }
+            }
+    
+            .content__btn1{
+                display: inline-block;
+                border: 1px solid $color-333;
+                overflow: hidden;
+                position: relative;
+                color: $color-333;
+                padding: 12px 35px;
+                border-radius: 40px;
+                cursor: pointer;
+                text-transform: uppercase;
+                transition: all 0.8s ease 0s;
+
+                @include max-breakpoint(575){
+                    padding: 10px 28px;
+                    font-size: 14px;
+                }
+
+                @include max-breakpoint(380){
+                    padding: 8px 24px;
+                }
+    
+                &::after{
+                    position: absolute;
+                    top: 50%;
+                    content: '';
+                    width: 20px;
+                    height: 20px;
+                    background-color: #333;
+                    border-radius: 50%;
+                    z-index: -1;
+                    left: -20px;
+                    transform: translate(-50%, -50%);
+                }
+    
+                &::before{
+                    position: absolute;
+                    top: 50%;
+                    content: '';
+                    width: 20px;
+                    height: 20px;
+                    background-color: #333;
+                    border-radius: 50%;
+                    z-index: -1;
+                    right: -20px;
+                    transform: translate(50%, -50%);
+                }
+    
+                &:hover{
+                    color: #fff;
+    
+                    &::after{
+                        @include  animation(criss-cross-left 0.7s both);
+                        @include keyframes(criss-cross-left){
+                            0% {
+                                left: -20px;
+                              }
+                              50% {
+                                left: 50%;
+                                width: 20px;
+                                height: 20px;
+                              }
+                              100% {
+                                left: 50%;
+                                width: 450px;
+                                height: 450px;
+                              }
+                        }
+                    }
+    
+                    &::before{
+                        @include  animation(criss-cross-right 0.7s both);
+                        @include keyframes(criss-cross-right){
+                            0% {
+                                right: -20px;
+                            }
+                            50% {
+                                right: 50%;
+                                width: 20px;
+                                height: 20px;
+                            }
+                            100% {
+                                right: 50%;
+                                width: 450px;
+                                height: 450px;
+                            }
+                        }
+                    }
+                  
+                }
+    
+    
+            }
+    
+            .content__btn2{
+                padding: 12px 35px;
+                background: transparent;
+                border: 1px solid $color-FF324D;
+                overflow: hidden;
+                position: relative;
+                color: $color-FF324D;
+                transition: all 0.8s ease 0s;
+                border-radius: 40px;
+                z-index: 0;
+                cursor: pointer;
+                text-transform: uppercase;
+                display: inline-block;
+
+                @include max-breakpoint(575){
+                    padding: 10px 28px;
+                    font-size: 14px;
+                }
+
+                @include max-breakpoint(380){
+                    padding: 8px 24px;
+                }
+    
+                &::after{
+                    @include button_background();
+                    background-color: $color-FF324D;
+                    width: 0;
+                    left: 0;
+                }
+                
+                &::before{
+                    @include button_background();
+                    background-color: $color-FF324D;
+                    width: 0;
+                    right: 0;
+                }
+    
+                &:hover{
+                    color: $color-white;
+    
+                    &::after, &::before{
+                        width: 51%;
+                    }
+                }
+            }
+        }
+    }
+    
+    .owl-dots{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 15px;
+    
+        .owl-dot{
+            outline: none;
+    
+            span{
+                background: $color-333;
+                position: relative;
+                border-radius: 100%;
+                
+                @include max-breakpoint(575){
+                    height: 6px;
+                    width: 6px;
+                }
+
+                &::before{
+                    content: "";
+                    position: absolute;
+                    border-radius: 100%;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    top: 0;
+                    margin: -4px;
+                    border: 2px solid $color-333
+                }
+            }
+    
+            &:hover{
+                span{
+                    background-color: $color-333;
+                }
+            }
+    
+            &.active{
+                span{
+                    background: $color-FF324D;
+    
+                    &::before{
+                        border: 2px solid $color-FF324D;
+                    }
+                }
+            }
+        }
+    }
+}

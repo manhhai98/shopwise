@@ -1,0 +1,148 @@
+/*========================3. Subcribe Modal========================*/
+.modal{
+
+    &__image{
+        background-image: url("../images/popup_img.jpg");
+        background-position: center center;
+        background-size: cover;
+        height: 100%;
+    }
+
+    &__main{
+        text-align: center;
+        padding: 50px;
+
+        @include max-breakpoint(991){
+            padding: 30px;
+        }
+
+        @include max-breakpoint(767){
+            padding: 25px;
+        }
+
+        @include max-breakpoint(480){
+            padding: 10px;
+        }
+
+        @include max-breakpoint(425){
+            p{
+                font-size: 14px;
+            }
+        }
+
+        .text__heading{
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            position: relative;
+
+            &::before{
+                content: "";
+                position: absolute;
+                left: 0;
+                width: 50px;
+                height: 1px;
+                background-color: $color-FF324D;
+                bottom: 0;
+                right: 0;
+                margin: 0 auto;
+            }
+
+            h4{
+                font-weight: 700;
+                margin: 0;
+                text-transform: capitalize;
+                color: $color-292b2c;
+
+                @include max-breakpoint(425){
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .form__btn{
+            @include button_hover_background();
+            width: 100%;
+            padding: 12px 35px;
+            border-radius: 30px;
+            border: 1px solid $color-333;
+            color: $color-white;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+
+            @include max-breakpoint(575){
+                padding: 10px 28px;
+            }
+
+            @include max-breakpoint(380){
+                padding: 8px 24px;
+            }
+
+            &::after{
+                @include button_background();
+                left: 0;
+                background-color: $color-333;
+            }
+
+            &::before{
+                @include button_background();
+                right: 0;
+                background-color: $color-333;
+            }
+
+            &:hover{
+                color: $color-333;
+
+                &::after, &::before{
+                    width: 0;
+                }
+            }
+        }
+
+        &-check{
+            position: relative;
+            cursor: pointer;
+
+            @include max-breakpoint(425){
+                font-size: 12px;
+            }
+
+            span{
+                vertical-align: middle;
+            }
+
+            &::before{
+                content: "";
+                border: 2px solid #ced4da;
+                height: 17px;
+                width: 17px;
+                margin: 0px 8px 0 0;
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            &::after{
+                content: "";
+                width: 11px;
+                position: absolute;
+                top: 50%;
+                left: 3px;
+                opacity: 0;
+                height: 6px;
+                border-left: 2px solid $color-white;
+                border-bottom: 2px solid $color-white;
+                transform: translateY(-65%) rotate(-45deg);
+            }
+
+            &.checked{
+                &::before{
+                    background-color: $color-FF324D;
+                    border-color: $color-FF324D;
+                }
+
+                &::after{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

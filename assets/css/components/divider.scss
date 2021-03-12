@@ -1,0 +1,55 @@
+/*======================== Divider Section ========================*/
+.divider-medium{
+    height: 50px;
+
+    @include max-breakpoint(1199){
+        height: 40px;
+    }
+
+    @include max-breakpoint(767){
+        height: 25px;
+    }
+
+    @include max-breakpoint(575){
+        height: 15px;
+    }
+}
+
+.divider-border{
+    text-align: center;
+    
+    &::after{
+        content: '';
+        @include center-vertical();
+        left: 0;
+        height: 0px;
+        width: 100%;
+        margin-top: 1px;
+        border-top: 1px solid #dddddd;
+    }
+
+    &::before{
+        content: '';
+        @include center-vertical();
+        left: 0;
+        height: 0px;
+        width: 100%;
+        margin-top: -1px;
+        border-top: 1px solid #dddddd;
+    }
+
+    i{
+        background-color: $color-white;
+        color: #d9d9d9;
+        position: relative;
+        
+        z-index: 1;
+        font-size: 30px;
+        padding: 0 40px;
+
+        @include max-breakpoint(480){
+            font-size: 26px;
+            padding: 0 25px;
+        }
+    }
+}
